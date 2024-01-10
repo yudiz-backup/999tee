@@ -1,0 +1,5 @@
+query secure_base_media_url{
+  storeConfig {
+    secure_base_media_url
+  }
+}

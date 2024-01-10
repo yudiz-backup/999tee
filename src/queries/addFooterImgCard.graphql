@@ -1,0 +1,6 @@
+
+query addFooterImgCard{
+  storeConfig{
+    absolute_footer
+  }
+}

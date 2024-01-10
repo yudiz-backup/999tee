@@ -1,0 +1,258 @@
+
+.rma_title_wrapper { margin-bottom: 30px; } 
+
+.rma_title_wrapper h1 { margin-bottom: 50px; }
+.rma_title_wrapper p {
+   font-family: var(--font-family) !important; font-weight: var(--font_weight_m) !important;
+}
+.rma_title_wrapper button span a{
+    font-family: var(--font-family); font-weight: var(--font_weight_m);
+}
+.career_portal ul{
+    padding: 10px;
+    box-shadow: 0px 0px 3px rgba(0,0, 0, 0.15);
+    border-radius: 6px;
+}
+ .job_cart:not(:last-child){
+    margin-bottom: 30px;
+}
+.header_status{border-bottom: 0px; box-shadow: var(--primary-box-shadow);}
+.header_status svg{stroke-width: 1.2;}
+.job_name_form{display: flex; column-gap: 16px;}
+.job_name_form [class='field-root-2gS']{width: 50%;}
+.modal_header{align-items: center;    padding: 0.875rem 1rem; border-bottom: 0px; box-shadow: var(--primary-box-shadow); position: relative; z-index: 1;}
+.close_modal button svg{stroke-width: 1.2; max-width: 20px;}
+.career_portal ul li{
+    border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.career_portal ul li svg{
+    color: var(--black-color);
+}
+.career_portal ul li img{
+    max-height: 16px;
+    width: auto;
+}
+.career_portal .job_req{
+    box-shadow: none;
+    padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.career_portal .job_req li{
+    padding: 0px 10px;
+    border-radius: 0px;
+}
+.career_portal .job_req li:first-child{
+padding-left: 0px;
+   
+}
+.career_portal .job_req li:not(:last-child){
+    border-right: 1px solid var(--black-color);
+}
+
+.jobTab [class="nav nav-tabs"] {
+    border-bottom: none !important;
+}
+
+.jobTab [class="nav-link"] {
+   font-family: var(--font-family) !important; font-weight: var(--font_weight_m) !important;
+    padding: 8px 14px;
+    overflow: hidden;
+}
+
+.jobTab [class="nav-link active"] {
+    background-color: var(--black-color) !important;
+    color: var(--white-color) !important;
+   font-family: var(--font-family) !important; font-weight: var(--font_weight_m) !important;
+    padding: 8px 14px;
+}
+
+.jobTabContent {
+    margin-top: 20px;
+}
+
+ 
+
+.jobTabContent [class="list-group-item"] span {
+   font-family: var(--font-family) !important; font-weight: var(--font_weight_m) !important;
+    margin-right: 5px;
+}
+
+.job_cart .job_status_txt { margin: 16px 0px 0px 28px; }
+.jobTabContent button:first-child {
+    margin-right: 10px;
+}
+
+.modal_body [class="modal-header"] {
+    padding-inline: 0;
+}
+.modal_body form{padding: 20px; padding-top: 0px;}
+.jobViewModal,
+.are_sure_modal {
+    width: 95%;
+    max-width: 740px;
+}
+
+.jobBoradModal [class="jobBorad-modal_body-1g_ modal-body"] {
+    overflow-y: scroll;
+    max-height: 70vh;
+}
+
+.jobBoradActiveModal {
+    display: block;
+    transform: none;
+}
+
+.status_btn {
+    font-family: var(--font-family) !important; font-weight: var(--font_weight_s) !important;
+    color: var(--theme-color);
+}
+
+.succes_status_btn {
+    font-family: var(--font-family) !important; font-weight: var(--font_weight_s) !important;
+    color: var(--success-color);
+}
+
+.upload_wrapper input {
+    margin-top: 5px;
+   font-family: var(--font-family) !important; font-weight: var(--font_weight_m) !important;
+}
+
+.sure_footer {
+    width: 100%;
+    justify-content: space-between;
+    border: none !important;
+    border-top: 0px !important;
+}
+.sure_footer button{margin: 0px;}
+.jobStatusModal .are_sure_modal {
+    max-width: 500px;
+}
+
+.jobViewModal [class="col-lg-6"] {
+    display: flex;
+}
+
+.jobViewModal [class="col-lg-6"]:where(:nth-child(3), :nth-child(4)) {
+    margin-top: 30px;
+}
+
+.jobViewModal [class="card"] {
+    width: 100%;
+}
+
+.jobViewModal [class="card"] [class="card-header"] {
+    background-color: var(--black-color);
+    color: var(--white-color);
+    letter-spacing: 1px;
+
+    font-family: var(--font-family) !important; font-weight: var(--font_weight_s) !important;
+}
+
+.jobViewModal [class="card"] [class="card-body"] {
+    background: transparent;
+}
+
+.jobViewModal [class="card"] [class="card-body"] p {
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+}
+
+.jobViewModal [class="modal-header"] {
+    align-items: center;
+}
+
+.jobViewModal [class="modal-header"] h5 {
+   font-family: var(--font-family) !important; font-weight: var(--font_weight_m) !important;
+}
+
+@media screen and (max-width: 1199px) {
+
+    .rma_title_wrapper h1 { margin-bottom: 35px; }
+
+    .jobTabContent button {
+        padding-inline: 8px;
+
+    }
+
+    .jobTabContent button span {
+        font-size: 13px !important;
+        margin: 0 !important;
+
+    }
+}
+@media screen and (max-width: 991px) {
+
+    .rma_title_wrapper h1 { margin-bottom: 25px; }
+    .jobViewModal [class="col-lg-6"]:not(:last-child) {
+        margin-top: 20px;
+    }
+
+}
+@media screen and (max-width: 768px) {
+
+    .jobTabContent [class="col-lg-6"]:first-child {
+        margin-bottom: 20px;
+    }
+    .jobViewModal,
+    .are_sure_modal {
+        max-width: 80%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .modal_body form{padding: 0px; padding-top: 0px;}
+    .jobTabContent li {
+        padding: 10px;
+    }
+
+    .jobTab button {
+        padding-inline: 5px;
+    }
+    :is(.jobBoradModal, .jobViewModal) [class="productFullDetail-modal_content-3Wi modal-content"] {
+        height: 450px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    .jobBoradModal .modal_body [class="modal-header"] {
+        margin-top: 0;
+    }
+    .jobViewModal,
+    .are_sure_modal {
+        max-width: 100%;
+        margin: auto;
+    }
+    .job_cart .job_status_txt { margin: 16px 0px 0px 20px !important; }
+}
+
+.sppiner{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+@media only screen  and (max-width: 767px)
+{
+    .rma_title_wrapper h1 { margin-bottom: 25px; }
+    .jobBoradModal [class="jobBorad-modal_body-1g_ modal-body"] {
+        max-height: calc(100vh - 260px);
+    }
+    .career_portal .job_req{
+        flex-direction: column;
+        gap: 5px;
+    }
+    .career_portal .job_req li:not(:last-child){
+        border-right: none;
+        padding: 0px;
+    }
+    .career_portal .job_req li{
+        padding: 0px;
+    }
+}

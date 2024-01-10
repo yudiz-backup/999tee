@@ -1,0 +1,6 @@
+query googleCaptchaKey {
+  getRecaptchaKey {
+    secretKey
+    siteKey
+  }
+}

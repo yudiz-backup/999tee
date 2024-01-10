@@ -1,0 +1,37 @@
+.newsletter_Wrap {
+    border: 1px solid var(--border-color);
+    padding: 15px 15px 15px 15px;
+}
+.checkbox_wrapper [class='checkbox-root-2Ji'] {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+.checkbox_wrapper
+    :is([class='checkbox-checkboxItem-2jm'], [class='checkbox-input-266']) {
+    display: none;
+}
+.checkbox_wrapper [class='checkbox-root-2Ji'] label {
+    margin-bottom: 0;font-weight: 400;
+}
+.checkbox {
+    padding: 20px 0px;
+}
+.checkbox input {
+    vertical-align: middle;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+.checkbox label {
+    font-size: 15px;
+    color: var(--black-color);
+    position: relative;
+    cursor: pointer;
+}
+.option {
+    background: var(--theme-bg-color);
+    color: var(--white-color);
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 3px;
+}

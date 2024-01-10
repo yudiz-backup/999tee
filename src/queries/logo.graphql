@@ -1,0 +1,5 @@
+query header_logo_src{
+  storeConfig {
+    header_logo_src
+  }
+}

@@ -1,0 +1,12 @@
+.price_wrap {
+    min-height: 40px;
+    padding: 10px 10px 30px 10px;
+}
+div[class='input-range__slider'] {
+    background: var(--black-color) !important;
+    border: 1px solid var(--black-color) !important;
+}
+span[class='input-range__label-container'] {
+    color: var(--black-color);
+    font-family: var(--font-family); font-weight: var(--font_weight_l);
+}

@@ -1,0 +1,115 @@
+.heading_block {
+    margin-top: 0;
+    composes: flexSpace from '../../components/variables.css';
+}
+.rma_payment {
+    padding: 20px 0 10px;
+}
+.rma_payment h4 {
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 16px;
+   font-family: var(--font-family) !important; font-weight: var(--font_weight_m) !important;
+}
+.admin_chat{
+    text-align: left;
+    padding-bottom: 10px;
+
+} 
+.user_chat{
+    text-align: right;
+    padding-bottom: 10px;
+   
+}
+
+.chat_main_wrapper { background: #fff; box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.15); padding: 15px; border-radius: 6px; }
+.chat_main_wrapper > div { margin-bottom: 10px; }
+/* .chat_msg {max-width: 90%; background-color: #f8fafc; padding: 10px; border-radius: 8px;}
+.admin_chat .chat_msg{background-color: rgba(220, 220, 220, 0.426);} */
+.admin_chat strong { display: block; margin-bottom: 8px; }
+.admin_chat { background: #fafafa; padding: 14px; border-radius: 10px; }
+.user_chat { background: #d6e9ff; padding: 14px; border-radius: 10px; }
+.user_chat p{    margin-right: 0; margin-left: auto; }
+.chat_main_wrapper { margin-bottom: 40px; }
+.chat_main_wrapper .files_wrapper { margin-top: 10px; }
+.chat_main_wrapper .files_wrapper button { display: flex; display: -webkit-flex; gap: 8px;  padding: 5px 14px; border: 1px dashed #d9d9d9; margin-bottom: 6px; border-radius: 5px; }
+.chat_main_wrapper .files_wrapper button img { width: 20px; }
+.chat_main_wrapper .files_wrapper button span { word-break: break-word;}
+
+.chat_main_wrapper .files_wrapper button:last-child { margin-bottom: 0px; }
+.rma_payment p {
+   font-family: var(--font-family) !important; font-weight: var(--font_weight_m) !important;
+}
+.rma_payment p:last-child {
+    margin-bottom: 0;
+}
+.rma_payment p span {
+    margin-left: 5px;
+}
+.border_btn {
+    composes: blackBorderBtn from '../../components/variables.css';
+}
+
+.rma_recent ul li:last-child {
+    flex: 0 0 14% !important;
+}
+
+.main_upload_box { display: flex; display: -webkit-flex; gap: 10px; flex-wrap: nowrap; -webkit-flex-wrap: nowrap; padding: 15px 0px; overflow-x: auto; }
+.main_upload_single_box { position: relative; width: 150px; height: 150px; flex-shrink: 0; -webkit-flex-shrink: 0; }
+.main_upload_single_box  .file_name { position: absolute; overflow: hidden; text-align: center; bottom: 0px; left: 0px; width: 100%; background: var(--black-color); color: var(--white-color); font-size: 10px; line-height: 1; padding: 5px; white-space: nowrap; text-overflow: ellipsis; }
+.main_upload_single_box  button { position: absolute; top: -10px; right: -10px; background: var(--black-color);  width: 25px; height: 25px; border-radius: 50%; }
+.main_upload_single_box  button span { flex-shrink: 0; -webkit-flex-shrink: 0; width: 16px; height: 100%; }
+.main_upload_single_box  button span svg { stroke: var(--white-color); }
+.upload_box_img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
+
+/* .upload_box_img {
+    border: 1px solid var(--border-color);
+    width: 150px;
+    height: 150px;
+    margin: 0 0;
+} */
+.rma_item ul li:first-child{
+    display: flex;
+    justify-content: center;
+}
+.rma_item ul li:last-child{
+text-align: center !important;
+}
+.upload_box a {
+   font-family: var(--font-family) !important; font-weight: var(--font_weight_m) !important;
+}
+
+.textColor{
+    color: var(--black-color) !important;
+}
+
+.textColor:hover{
+    color: var(--white-color) !important;
+}
+@media (max-width: 992px) {
+    .rma_item ul li:first-child{
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 0px;
+    }
+    .rma_item ul li:first-child label span{
+        width: auto;
+    }
+    .rma_item ul li:nth-child(2){
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .rma_item ul li:first-child::before{
+      padding-right: 0px;
+    }
+    .rma_item ul li:last-child{
+flex: 0 0 100% !important;
+justify-content: space-between;
+display: flex !important;
+    }
+}

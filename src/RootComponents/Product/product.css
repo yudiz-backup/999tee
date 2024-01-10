@@ -1,0 +1,44 @@
+.root {
+    text-align: center;
+    background-color: rgb(var(--venia-global-color-error));
+    color: rgb(var(--venia-global-color-gray));
+    padding: 1rem 2rem;
+}
+.page_not_find {
+    padding: 50px 0px;
+}
+.not_found_left {
+    background-color: var(--white-color200);
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    float: right;
+}
+.not_found_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+}
+.not_found_text h1 {
+    font-size: 2rem;
+}
+.not_found_text a {
+    color: var(--base-color);
+    font-size: 14px;
+    border: 1px solid var(--base-color);
+    display: inline-block;
+    width: 200px;
+    padding: 10px;
+    border-radius: 4px;
+    margin: 10px auto;
+    transition: 0.3s all;
+}
+.not_found_text a:hover {
+    background-color: var(--base-color);
+    color: var(--white-color);
+}

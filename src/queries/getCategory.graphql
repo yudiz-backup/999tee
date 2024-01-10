@@ -1,0 +1,184 @@
+query category(
+    $id: Int!
+    $pageSize: Int!
+    $currentPage: Int!
+    $filters: ProductAttributeFilterInput!
+    $sort: ProductAttributeSortInput
+) {
+    category(id: $id) {
+        id
+        description
+        name
+        product_count
+        meta_title
+        meta_keywords
+        meta_description
+        image
+    }
+    products(
+        pageSize: $pageSize
+        currentPage: $currentPage
+        filter: $filters
+        sort: $sort
+    ) {
+        items {
+            # id is always required, even if the fragment includes it.
+            id
+            # TODO: Once this issue is resolved we can use a
+            # GalleryItemFragment here:
+            # https://github.com/magento/magento2/issues/28584
+            name
+            sku
+            stock_status
+            small_image {
+                url
+            }
+            url_key
+            url_suffix
+            ... on CustomizableProductInterface {
+                options {
+                    title
+                    required
+                    sort_order
+                    option_id
+                    ... on CustomizableDropDownOption {
+                        value {
+                            option_type_id
+                            sku
+                            price
+                            price_type
+                            sort_order
+                            title
+                            uid
+                        }
+                    }
+
+                    ... on CustomizableRadioOption {
+                        value {
+                            option_type_id
+                            price_type
+                            price
+                            sku
+                            sort_order
+                            title
+                            uid
+                        }
+                    }
+                    ... on CustomizableCheckboxOption {
+                        value {
+                            option_type_id
+                            price_type
+                            price
+                            sku
+                            sort_order
+                            title
+                            uid
+                        }
+                    }
+                    ... on CustomizableMultipleOption {
+                        value {
+                            option_type_id
+                            price_type
+                            price
+                            sku
+                            sort_order
+                            title
+                            uid
+                        }
+                    }
+
+                    ... on CustomizableAreaOption {
+                        areaValue: value {
+                            max_characters
+                            price_type
+                            price
+                            uid
+                        }
+                    }
+
+                    ... on CustomizableFieldOption {
+                        textValue: value {
+                            max_characters
+                            price_type
+                            price
+                            uid
+                        }
+                    }
+                }
+            }
+            price_range {
+                minimum_price {
+                    regular_price {
+                        value
+                        currency
+                    }
+                    final_price {
+                        value
+                        currency
+                    }
+                    discount {
+                        amount_off
+                        percent_off
+                    }
+                }
+                maximum_price {
+                    regular_price {
+                        value
+                        currency
+                    }
+                    final_price {
+                        value
+                        currency
+                    }
+                    discount {
+                        amount_off
+                        percent_off
+                    }
+                }
+            }
+            ... on ConfigurableProduct {
+                configurable_options {
+                    attribute_code
+                    attribute_id
+                    id
+                    label
+                    values {
+                        default_label
+                        label
+                        store_label
+                        use_default_value
+                        value_index
+                        swatch_data {
+                            ... on ImageSwatchData {
+                                thumbnail
+                            }
+                            value
+                        }
+                    }
+                }
+                variants {
+                    attributes {
+                        code
+                        value_index
+                    }
+                    product {
+                        id
+                        media_gallery_entries {
+                            id
+                            disabled
+                            file
+                            label
+                            position
+                        }
+                        sku
+                        stock_status
+                    }
+                }
+            }
+        }
+        page_info {
+            total_pages
+        }
+        total_count
+    }
+}

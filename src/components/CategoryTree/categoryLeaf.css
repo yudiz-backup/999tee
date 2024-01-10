@@ -1,0 +1,35 @@
+.root {
+    align-items: center;
+    display: flex;
+    margin: 0 1.25rem;
+}
+
+.target {
+    align-items: center;
+    display: flex;
+    flex: auto;
+    height: 3rem;
+    justify-content: flex-start;
+    margin: 0 -1.25rem;
+    padding: 0px 15px 0 15px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.text {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: var(--white-color) !important;
+    font-family: var(--font-family); font-weight: var(--font_weight_l);
+}
+.icon svg {
+    color: var(--white-color) !important;
+}
+@media (max-width: 767px) {
+    .text {
+       font-family: var(--font-family) !important; font-weight: var(--font_weight_m) !important;
+        color: var(--black-color) !important;
+    }
+}

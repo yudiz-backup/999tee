@@ -1,0 +1,18 @@
+query getAllProductReviews($current_page: Int, $limit: Int) {
+    productReviews(current_page: $current_page, limit: $limit) {
+        total_count
+        current_page
+        limit
+        data {
+            created_at
+            review
+            review_id
+            product_name
+            product_img
+            rating
+            detail
+            url_key
+            status
+        }
+    }
+}

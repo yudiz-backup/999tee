@@ -1,0 +1,41 @@
+.root {
+}
+
+.tree {
+    margin: 0;
+}
+
+.leaf {
+}
+
+.branch {
+}
+
+.inactive {
+    position: fixed;
+    visibility: hidden;
+}
+.sale_link{
+    margin: 0 1.25rem;
+}
+.sale_link a span{
+    font-family: var(--font-family); font-weight: var(--font_weight_m);
+    color: var(--black-color) ;
+
+}
+.sale_link button{
+    height: 3rem;
+
+}
+@media screen and (min-width: 220px) and (max-width: 767px) {
+    .tree {
+        border-bottom: 1px solid var(--border-color);
+        background-color: var(--white-color);
+    }
+    .tree [class="categoryBranch-text-2Tw categoryLeaf-text-2c-"]{
+        color: var(--black-color) !important;
+    }
+    .tree [class="storeSwitcher-drop_down_ing-3Hm"]{
+        filter: brightness(0)
+    }
+}

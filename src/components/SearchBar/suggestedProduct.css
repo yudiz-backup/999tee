@@ -1,0 +1,194 @@
+/* .root,
+.root:hover {
+    display: flex;
+    color: var(--black-color);
+} */
+.product_details_Wrap {
+    padding-top: 10px;
+}
+.image {
+    /* align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    flex: 0 0 85px;
+    min-width: 85px; */
+    width: 330px;
+    height: 427px;
+    /* border: 1px solid var(--border-color); */
+    overflow: hidden;
+}
+.searchItems {
+    margin: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+.thumbnail {
+    height: 100%;
+    /* max-height: 100px; */
+    /* object-fit: contain;
+    object-position: center;
+     */
+    object-fit: cover;
+    width: 100%;
+    transition: all 1s ease;
+    transform: scale(1);
+}
+.noo_product_image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    composes: flexCenter from '../variables.css';
+    /* height: 300px; */
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    overflow: hidden;
+}
+.noo_product_image > a img {
+    transition: all 1s ease;
+    transform: scale(1);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.noo_product_image:hover a img {
+    transform: scale(1.2);
+}
+/* .product_details_Wrap {
+    padding-left: 20px;
+    flex: 0 0 calc(100% - 125px);
+    min-width: calc(100% - 125px);
+} */
+@keyframes searchOpen {
+    0% {
+        transform: translateY(50%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+@-webkit-keyframes searchOpen {
+    0% {
+        -webkit-transform: translateY(50%);
+    }
+    to {
+        -webkit-transform: translateY(0%);
+    }
+}
+.size_wrap {
+    background-color: var(--black-light-color);
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 999;
+    bottom: 0px;
+    width: 95%;
+    margin: 0 auto !important;
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+    margin-top: -46px;
+    position: absolute;
+    left: 9px;
+    flex-wrap: wrap;
+}
+.sizes_disable {
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+.sizes_disable:hover {
+    text-decoration: line-through !important;
+}
+.size_wrap li button {
+    font-size: 14px;
+    color: var(--white-color);
+    font-family: var(--font-family) !important; font-weight: var(--font_weight_s) !important;
+    height: fit-content;
+    min-width: 75px;
+}
+.suggested_size_wrap li button {
+    min-width: fit-content;
+}
+.suggested_size_wrap li button:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+.noo_product_image:hover .size_wrap {
+    opacity: 1;
+    visibility: visible;
+    bottom: 20px;
+    display: flex;
+    animation: searchOpen 0.5s;
+    -webkit-animation: searchOpen 0.5s;
+}
+.name {
+    /* word-break: break-word;
+    color: var(--black-color);
+    margin: 0 0 5px 0;
+    font-size: 15px; */
+    display: block;
+    composes: product_name from '../CedHome/home.css';
+}
+.price {
+    composes: vendor_price_wrap from '../CedHome/home.css';
+    text-align: left;
+    margin: 5px 0;
+}
+.price span {
+    /* font-weight: 800; */
+    font-family: var(--font-family); font-weight: var(--font_weight_l);
+}
+/* rtl */
+body[class='rtl_view'] .product_details_Wrap {
+    padding-right: 20px;
+}
+.colors_wrap {
+    composes: colors_wrap from '../CedHome/home.css';
+}
+
+/* .colors_wrap > div {
+    width: 23px;
+    height: 23px;
+    margin-right: 10px;
+    border-radius: 100%;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    border: 3px solid transparent;
+    padding: 0;
+} */
+.colors_inner {
+    composes: colors_inner from '../CedHome/home.css';
+}
+.colors_wrap > div :last-child {
+    margin-right: 0;
+}
+.colors_stars_wrap{
+    composes: colors_stars_wrap from '../CedHome/home.css';
+}
+/* .colors_wrap > div:hover{padding: 1px !important;} */
+.colors_wrap > div:hover,
+.colors_box {
+    border: 1px solid var(--secondary-color);
+    padding: 2px;
+}
+@media (max-width: 1440px) and (min-width: 1700px) {
+    .image {
+        height: 350px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .image {
+        height: 340px;
+        width: 280px;
+    }
+}
+/* @media (max-width: 1280px) {
+    .image {height: 300px;}
+} */
+@media (max-width: 768px) {
+    .image {
+        height: 290px;
+    }
+}

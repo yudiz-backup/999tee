@@ -1,0 +1,31 @@
+.root {
+    align-items: center;
+    display: flex;
+    border:none;
+    width: 100%;
+}
+
+.content {
+    width: 100%;
+    color: var(--black-color);
+    background-color: var(--white-color);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content svg {
+    stroke: var(--white-color);
+    background: var(--black-color);
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+}
+
+.text {
+    text-align: left;
+    white-space: nowrap;
+    font-size: 12px;
+}

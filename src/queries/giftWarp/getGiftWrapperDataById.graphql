@@ -1,0 +1,15 @@
+query getGiftWrapperDataById($id:Int!){
+mpGiftWrapWrapper(id: $id) {
+amount
+category
+created_at
+description
+image
+name
+price_type
+sort_order
+status
+updated_at
+wrap_id
+}
+}

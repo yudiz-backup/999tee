@@ -1,0 +1,6 @@
+mutation removeFromWishlist($product_id: Int!) {
+    removeFromWishlist(product_id: $product_id) {
+        success
+        message
+    }
+}

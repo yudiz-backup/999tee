@@ -1,0 +1,15 @@
+.root {
+    composes: root from '../clickable.css';
+    color: var(--ced-red-color);
+    line-height: 1.25rem;
+    max-width: 100%;
+}
+.root span {
+    font-family: var(--font-family) !important; font-weight: var(--font_weight_m) !important;
+}
+.root:hover {
+    color: var(--ced-black-color);
+}
+.forgotPasswordButtonContainer span{
+font-family: var(--font-family); font-weight: var(--font_weight_l);
+}

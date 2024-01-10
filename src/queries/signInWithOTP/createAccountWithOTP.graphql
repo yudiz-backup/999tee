@@ -1,0 +1,44 @@
+mutation createAccountWithOTP(
+  $mobileNumber: String
+    $otp: String
+    $websiteId: Int
+    $input:CustomerInput!
+){
+  createCustomerAccount(
+    input: $input
+    mobileNumber: $mobileNumber
+    otp: $otp
+    websiteId: $websiteId
+  ) {
+    customer {
+      addresses{
+        city
+        company
+        country_code
+        firstname
+        lastname
+        middlename
+        postcode
+        street
+        telephone
+        city
+        company
+      }
+      created_at
+      date_of_birth
+      default_billing
+      default_shipping
+      email
+      firstname
+      gender
+      is_subscribed
+      lastname
+      middlename
+      mobilenumber
+      suffix
+      terms_conditions
+    }
+    message
+    status
+  }
+}

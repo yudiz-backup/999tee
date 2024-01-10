@@ -1,0 +1,12 @@
+query storeConfigData {
+    storeConfig {
+        id
+        copyright
+        enable_cookie_restriction
+        cookie_lifetime
+        free_shipping {
+            is_enable
+            min_order_amount
+        }
+    }
+}

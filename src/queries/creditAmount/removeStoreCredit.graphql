@@ -1,0 +1,11 @@
+mutation removeStoreCredit(
+    $cart_id: String!
+){
+removeStoreCreditFromCart(
+input: {
+cart_id: $cart_id
+}
+) {
+status
+}
+}

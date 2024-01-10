@@ -1,0 +1,33 @@
+query creditBalanceInfo {
+customer {
+firstname
+lastname
+suffix
+email
+storecredit_credit {
+balance_id
+website_id
+customer_id
+balance_amount
+}
+storecredit_all_credit {
+balance_id
+website_id
+customer_id
+balance_amount
+}
+storecredit_history_credit {
+history_id
+customer_id
+creditmemo_id
+order_id
+website_id
+type
+change_amount
+balance_amount
+comment_content
+created_time
+updated_time
+}
+}
+}

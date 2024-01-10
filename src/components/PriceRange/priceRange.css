@@ -1,0 +1,32 @@
+.regularprice {
+}
+.regularprice {
+    display: inline-block;
+    margin-left: 10px;
+    position: relative;
+}
+.regularprice:after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: #b9b9b9;
+    left: 0;
+    top: 50%;
+}
+.regularprice span {
+    font-size: 15px;
+    color: #b9b9b9;
+}
+
+/* rtl */
+body[class='rtl_view'] .regularprice:after {
+    left: unset;
+    right: 0;
+}
+
+@media screen and (min-width: 220px) and (max-width: 767px) {
+    .regularprice span {
+        font-size: 13px;
+    }
+}

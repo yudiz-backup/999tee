@@ -1,0 +1,36 @@
+.root {
+    align-items: stretch;
+    /* background-color: var(--white-color); */
+    display: grid;
+    gap: 0.75rem;
+    grid-auto-flow: column;
+    height: 4rem;
+}
+
+.contents {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+.contents span {
+    color: var(--white-color);
+    font-family: var(--font-family); font-weight: var(--font_weight_l);
+    display: inline-block;
+   font-family: var(--font-family) !important; font-weight: var(--font_weight_m) !important;
+    margin-right: 15px;
+    text-decoration: none;
+    transition: all 0.3s;
+    border-bottom: 1px solid transparent;
+}
+.contents span:hover{
+    border-color: var(--white-color);
+}
+.contents span:last-child {
+    margin-right: 0;
+}
+.signIn {
+    composes: root from '../LinkButton/linkButton.css';
+}
+.icon svg {
+    stroke: var(--white-color);
+}

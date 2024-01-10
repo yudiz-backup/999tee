@@ -1,0 +1,6 @@
+mutation accountConfirmationLink($email: String!) {
+    accountConfirmationLink(email: $email) {
+        success
+        message
+    }
+}

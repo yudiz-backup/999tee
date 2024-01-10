@@ -1,0 +1,6 @@
+mutation saveToken($tokenId: String!) {
+    saveToken(tokenId: $tokenId) {
+        message
+        success
+    }
+}

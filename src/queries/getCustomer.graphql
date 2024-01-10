@@ -1,0 +1,47 @@
+# expects bearer header to be set via context to return data
+query getCustomer {
+    customer {
+        id
+        email
+        firstname
+        lastname
+        mobilenumber
+        is_subscribed
+        default_billing
+        default_shipping
+        # facebook_link
+        gst_number
+        # instagram_link
+        cin_number
+        terms_conditions
+        # twitter_link
+        dob
+        b2b_activasion_status {
+            label
+            value
+        }
+    
+        addresses {
+            id
+            firstname
+            lastname
+            street
+            city
+            region {
+                region_code
+                region
+            }
+            postcode
+            country_code
+            telephone
+            company
+            default_billing
+        }
+        wishlist {
+            items_count
+        }
+        compare_list {
+            item_count
+        }
+    }
+}

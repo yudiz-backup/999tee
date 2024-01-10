@@ -1,0 +1,33 @@
+mutation rewardPointCalculation(
+  $cart_id: String!, 
+  $points: Int!, 
+  $rule_id: String!, 
+  ){
+  MpRewardSpendingPoint(
+    cart_id : $cart_id,
+    points:$points,    
+    rule_id:$rule_id,
+    address_information: {
+      billing_address: {
+        city: ""
+        country_code: ""
+        firstname: ""
+        lastname: ""
+        street: ""
+        telephone: ""
+      }
+      shipping_address: {
+        city: ""
+        country_code: ""
+        firstname: ""
+        lastname: ""
+        street: ""
+        telephone: ""
+      }
+    }
+  ) {
+    code
+    title
+    value
+  }
+}

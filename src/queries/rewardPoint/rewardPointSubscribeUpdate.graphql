@@ -1,0 +1,6 @@
+mutation rewardPointSubscribeUpdate(
+  $isExpire:Boolean!,
+  $isUpdate:Boolean!
+  ){
+  MpRewardSubscribe(input: { isExpire: $isExpire, isUpdate: $isUpdate })
+}

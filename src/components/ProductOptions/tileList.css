@@ -1,0 +1,21 @@
+.root {
+    display: grid;
+    gap: 1rem;
+    /* / grid-auto-flow: column; / */
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); 
+    
+}
+
+@media(max-width: 375px) {
+    .root{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media only screen  and (max-width: 767px)
+{
+    .root {
+      
+        grid-template-columns: repeat(auto-fill, minmax(48px, 1fr)); 
+        
+    }  
+}

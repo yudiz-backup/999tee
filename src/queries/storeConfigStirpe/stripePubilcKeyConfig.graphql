@@ -1,0 +1,9 @@
+query stripePubilcKeyConfig {
+  storeConfig {
+    stripeconfig {
+      stripe_live_pk
+      stripe_mode
+      stripe_test_pk
+    }
+  }
+}

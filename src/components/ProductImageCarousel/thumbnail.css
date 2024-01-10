@@ -1,0 +1,45 @@
+/** The "thumbnail" is a round pil button below the product image in mobile or
+ * as a thumbnail to the left of the product image in desktop.
+ */
+.root {
+    border: 1px solid var(--ced-border-color);
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    background: var(--ced-border-color);
+    outline: none;
+}
+
+.rootSelected {
+    composes: root;
+    background-color: var(--ced-black-color);
+    border: 0;
+}
+
+.image {
+    display: none;
+}
+
+/* For desktop mode where buttons are an image... */
+@media (min-width: 1024px) {
+    .root {
+        border: 1px solid var(--ced-border-color);
+        height: auto;
+        width: 80px;
+        border-radius: 0;
+        background: var(--ced-white-color);
+    }
+    .rootSelected {
+        composes: root;
+        border-color: var(--ced-red-color);
+    }
+
+    .image {
+        background-color: rgb(var(--venia-global-color-gray));
+        display: block;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+        width: 100%;
+    }
+}

@@ -1,0 +1,7 @@
+mutation accountConfirmation($id: Int!, $key: String!) {
+    accountConfirmation(id: $id, key: $key) {
+        success
+        message
+        token
+    }
+}

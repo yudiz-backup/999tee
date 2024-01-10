@@ -1,0 +1,284 @@
+/* mega menu section */
+@keyframes delayOpen {
+    0% {
+        transform: translateY(50%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+.main_navigation {
+    background-color: var(--white-color);
+}
+.navigationWrapper {
+    background-color: transparent;
+    display: block !important;
+    position: relative;
+}
+.ced_megamenu {
+    margin: 0;
+    display: flex;
+}
+.ced_megamenu li:nth-child(2) {
+    order: -1;
+}
+.mainLink {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    padding: 30px 12px;
+    position: relative;
+    /* margin-right: 10px; */
+}
+.mainLink:last-child {
+    margin-right: 0;
+}
+
+.mainLink > a{
+    color: var(--grey-color);
+    font-size: 13px;
+    display: inline-block;
+    font-family: var(--font-family); ;
+    transition: 0.3s all;
+    -webkit-transition: 0.3s all;
+    -moz-transition: 0.3s all;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: var(--font_weight_b) !important;
+    letter-spacing: 3px;
+}
+
+.mainLink [class="active"]{
+    font-family: var(--font-family) !important; font-weight: var(--font_weight_m) !important;
+}
+ul[class="megaMenu-sub_menu-3AZ"] li a::before,
+.mainLink > a::before {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 1px;
+    bottom: -8px;
+    left: 0;
+    background-color: var(--black-color);
+    transition: width 0.3s;
+}
+.mainLink a:hover {
+    color: var(--black-color);
+}
+ul[class="megaMenu-has_child-1b6"] > a::before,
+.mainLink:hover > a::before {
+    width: 100%;
+}
+
+.sub_menu {
+    text-transform: uppercase;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);  
+    border-top: none;
+    border-radius: 6px; 
+    flex-direction: column;
+    gap: 4px;
+}
+
+.item.haschild .sub_menu {
+    display: flex;
+    padding:15px 20px;
+    position: absolute;
+    width: 300px;
+    top: 105px;
+    left: 0;
+    background: var(--white-color);
+    /* opacity: 0;
+    visibility: hidden; */
+    display: none;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    overflow: hidden;
+}
+.item.haschild:hover > .sub_menu {
+    /* opacity: 1;
+    visibility: visible; */
+    display: flex;
+    z-index: 99;
+    top: 81px;
+}
+.item.haschild > .sub_menu .has_child {
+    position: relative;
+    flex: 0 0 10%;
+    max-width: 10%;
+}
+.item.haschild:hover > .sub_menu .has_child:nth-child(1), .item.haschild:hover > .sub_menu > li:nth-child(1) {
+    animation: delayOpen 0.9s;
+}
+.item.haschild:hover > .sub_menu .has_child:nth-child(2), .item.haschild:hover > .sub_menu > li:nth-child(2) {
+    animation: delayOpen 1s;
+}
+.item.haschild:hover > .sub_menu .has_child:nth-child(3), .item.haschild:hover > .sub_menu > li:nth-child(3) {
+    animation: delayOpen 1.5s;
+}
+
+.sub_menu .has_child a, .sub_menu > li a {
+    display: inline-block;
+    color: var(--grey-color);
+    transition: 0.3s all;
+    -webkit-transition: 0.3s all;
+    -moz-transition: 0.3s all;
+}
+.sub_menu .has_child a:hover, .sub_menu > li a:hover {
+    color: var(--black-color);
+}
+.sub_menu .has_child > a, .sub_menu > li > a {
+    position: relative;
+    font-size: 14px;
+    font-family: var(--font-family) !important; font-weight: var(--font_weight_b) !important;
+    letter-spacing: 1px;
+}
+.sub_menu .lavel_2 {
+    padding-top: 10px;
+}
+.sub_menu .lavel_2 li:not(:last-child) {
+    padding-bottom: 5px;
+}
+.sub_menu .lavel_2 li a {
+    padding: 5px 0 0 0;
+    font-size: 12px;
+    display: inline-block;
+    position: relative;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+/*
+.sub_menu .lavel_2 li a::before {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    width: 0%;
+    height: 1px;
+    background: var(--black-color);
+    transition: all 0.3s;
+}
+.sub_menu .lavel_2 li:hover a:before {
+    width: 60%;
+}
+ */
+
+@media (max-width: 1280px) {
+    .item.haschild > .sub_menu .has_child {
+        flex: 0 0 15%;
+        max-width: 15%;
+    }
+}
+@media (max-width: 991px) {
+    .item {
+        padding: 30px 5px;
+    }
+    .item.haschild > .sub_menu .has_child {
+        flex: 0 0 14%;
+        max-width: 14%;
+    }
+}
+@media (max-width: 767px) {
+    .item {
+        display: none;
+    }
+}
+@media (max-width: 680px) {
+    .main_navigation {
+        display: none;
+    }
+}
+@media (max-width: 360px) {
+    .contentWrapper::after {
+        width: 80%;
+    }
+}
+
+.megamenu_section .dropdown-toggle {
+    position: relative;
+    color: var(--black-color);
+   font-family: var(--font-family) !important; font-weight: var(--font_weight_m) !important;
+    cursor: pointer;
+}
+.megamenu_section .dropdown-toggle::before {
+    position: absolute;
+    content: '';
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: blue;
+    transition: 0.5s;
+}
+.megamenu_section .dropdown-toggle:hover::before {
+    width: 100%;
+}
+.megamenu_section .dropdown-toggle::after {
+    display: none;
+}
+.megamenu_section .navbar-nav li:hover > ul.dropdown-menu {
+    display: block;
+}
+.megamenu_section .dropdown-submenu {
+    position: relative;
+}
+.megamenu_section .dropdown-submenu > .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+}
+
+.megamenu_section .megamenu {
+    position: fixed !important;
+    border: none !important;
+    left: 0;
+    width: 100%;
+    transform: none;
+    transition-delay: 0.3s;
+    background-color: var(--white-color);
+    padding: 39px 0 !important;
+    box-shadow: 0 10px 20px #00000017;
+    animation: menuOpen 0.8s;
+}
+.megamenu_section .megamenu_item h5 {
+    color: var(--black-color);
+    font-size: 14px;
+   font-family: var(--font-family) !important; font-weight: var(--font_weight_m) !important;
+}
+.megamenu_section .megamenu_item_link {
+    color: var(--black-color);
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: 400;
+    display: block;
+}
+.megamenu_section .navbar-nav li:hover .delay-1 {
+    animation: delayOpen 0.9s;
+}
+.megamenu_section .navbar-nav li .delay-2 {
+    animation: delayOpen 1s;
+}
+.megamenu_section .navbar-nav li .delay-3 {
+    animation: delayOpen 1.5s;
+}
+.megamenu_section .navbar-nav li:hover .ani {
+    opacity: 1;
+}
+@keyframes delayOpen {
+    0% {
+        transform: translateY(50%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes menuOpen {
+    0% {
+        transform: translateY(10%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}

@@ -1,0 +1,102 @@
+.root {
+    align-content: flex-start;
+    border: 1px solid var(--border-color);
+    border-radius: 3px;
+    box-shadow: none;
+    cursor: pointer;
+    display: grid;
+    font-size: 1rem;
+    padding: 1rem 1.25rem;
+    position: relative;
+    row-gap: 0.5rem;
+    transition: border-color 384ms var(--venia-global-anim-in);
+    outline: none;
+}
+
+@media (min-width: 961px) {
+    .root {
+        padding: 1.5rem 1.5rem;
+    }
+}
+
+.root_selected {
+    composes: root;
+    border-color: var(--black-color);
+    cursor: default;
+}
+
+.root_updated {
+    composes: root_selected;
+    animation: flash var(--venia-global-anim-bounce) 640ms 2;
+}
+
+/* .root:hover {
+    border-color: var(--base-color);
+} */
+
+.defaultCard {
+    grid-area: 1 / 1;
+}
+
+.editButton {
+    padding: 1rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.editButton svg{
+    stroke: var(--black-color);
+
+}
+@media (min-width: 961px) {
+    .editButton {
+        right: 0.375rem;
+        top: 0.375rem;
+    }
+}
+
+.editIcon {
+    stroke: var(--theme-color);
+    fill: var(--fill, white);
+    transition: fill 384ms var(--venia-global-anim-standard);
+}
+
+.defaultBadge {
+    background: var(--black-color);
+    display: inline-block;
+    max-width: 65px;
+    text-align: center;
+    color: var(--white-color);
+    border-radius: 3px;
+    margin-bottom: 10px;
+    font-family: var(--font-family); font-weight: var(--font_weight_l);
+    min-height: 26px;
+    line-height: 26px;
+}
+
+.name {
+    font-family: var(--font-family) !important; font-weight: var(--font_weight_l) !important;
+}
+
+.address {
+    display: grid;
+    gap: 0.5rem;
+}
+
+/* rtl */
+body[class='rtl_view'] .editButton {
+    left: 0.375rem;
+    right: unset;
+}
+
+@keyframes flash {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}

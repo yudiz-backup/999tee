@@ -1,0 +1,9 @@
+query cmsBlocks{
+  cmsBlocks(identifiers:"customisation") {
+    items {
+      content
+      identifier
+      title
+    }
+  }
+}

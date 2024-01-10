@@ -1,0 +1,11 @@
+query notificationList{
+  notificationList {
+    created_at
+    customer_id
+    entity_id
+    is_read
+    msg
+    notification_type
+    updated_at
+  }
+}

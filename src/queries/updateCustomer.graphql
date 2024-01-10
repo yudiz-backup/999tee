@@ -1,0 +1,34 @@
+mutation updateCustomer(
+    $firstname: String!
+    $lastname: String!
+    $email: String
+    $mobilenumber: String
+    $password: String
+    $cin_number:String
+    $gst_number:String
+    $dob:String
+) {
+    updateCustomer(
+        input: {
+            firstname: $firstname
+            lastname: $lastname
+            email: $email
+            mobilenumber: $mobilenumber
+            password: $password
+            cin_number: $cin_number
+            gst_number:$gst_number
+            dob:$dob
+        }
+    ) {
+        customer {
+            firstname
+            lastname
+            email
+            mobilenumber
+            cin_number
+            terms_conditions
+            gst_number
+            dob
+        }
+    }
+}

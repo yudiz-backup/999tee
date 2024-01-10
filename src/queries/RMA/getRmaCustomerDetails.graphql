@@ -1,0 +1,62 @@
+query getRmaCustomerDetails($email: String){
+  customer {
+    mp_rma(filter: {customer_email:{eq:$email}}, pageSize: 300, currentPage: 1) {
+      items{
+        comment
+        created_at
+        customer_email
+        files
+        increment_id
+        is_canceled
+        last_responded_by
+        order_id
+        order_increment_id
+        request_id
+        request_item{
+          additional_fields
+          created_at
+          item_id
+          name
+          order_item_id
+          price
+          price_returned
+          product_id
+          qty_rma
+          reason
+          request_id
+          sku
+          solution
+        }
+        request_reply{
+          author_name
+          content
+          created_at
+          files
+          is_customer_notified
+          is_visible_on_front
+          reply_id
+          request_id
+          type
+        }
+        request_shipping_label{
+          request_id
+          shipping_label_id
+        }
+        status_id
+        store_id
+        updated_at
+        
+      }
+      page_info{
+        currentPage
+        endPage
+        hasNextPage
+        hasPreviousPage
+        pageSize
+        startPage
+      }
+      total_count
+    }
+  
+  }
+}

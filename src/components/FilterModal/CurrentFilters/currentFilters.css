@@ -1,0 +1,44 @@
+.root {
+    /* display: flex;
+    flex-wrap: wrap; */
+    padding-top: 15px;
+    margin: 0;
+}
+
+ul.root li {
+    margin-bottom: 10px;
+    border-radius: 3px;
+    display: block;
+    cursor: pointer;
+}
+ul.root li:last-child {
+    margin-bottom: 0;
+}
+ul.root li [class="currentFilter-root-14k"] {
+   width: 100%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+ul.root li span{
+    color: var(--black-color);
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+ul.root li svg {
+    stroke: var(--black-color);
+    width: 17px;
+}
+/* .root:empty {
+    display: none;
+} */
+
+@media screen and (min-width: 220px) and (max-width: 767px) {
+    .menu_root {
+        margin: 20px;
+        padding: 15px 15px 10px 15px;
+    }
+}

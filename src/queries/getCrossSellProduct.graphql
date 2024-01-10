@@ -1,0 +1,34 @@
+query getCrossSellProduct($id: Int!){
+  configurableoption(product_id:$id){
+    data {
+      configChild{
+        configId
+        configImage
+        configName
+        configPrice
+        configSku
+        configstockstatus
+        configurable_options {
+          Attribute_code
+          Attribute_id
+          attribute_options {
+            code
+            label
+            value
+          }
+        }
+      }
+      description
+      final_price
+      id
+      image
+      name
+      price
+      regularPrice
+      sku
+      specialPrice
+      type
+      urlkey
+    }
+  }
+}

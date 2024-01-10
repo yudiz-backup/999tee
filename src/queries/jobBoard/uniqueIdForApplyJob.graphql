@@ -1,0 +1,5 @@
+query uniqueIdForApplyJob($uniqueId: String!){
+  jobStatusByUid(uniqueId: $uniqueId) {
+    job_status
+  }
+}

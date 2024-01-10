@@ -1,0 +1,9 @@
+.root {
+    display: block;
+}
+
+@media screen and (min-width: 220px) and (max-width: 767px) {
+    .root div[class='text-right'] {
+        display: none;
+    }
+}

@@ -1,0 +1,13 @@
+query attributesOption{
+  attributesoption {
+    data {
+      Attribute_code
+      Attribute_id
+      attribute_options{
+        label
+        value
+        hex_code
+      }
+    }
+  }
+}

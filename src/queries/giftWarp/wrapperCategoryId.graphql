@@ -1,0 +1,13 @@
+query wrapperCategoryId($id:Int!){
+mpGiftWrapCategory(id: $id) {
+category_id
+created_at
+customer_group
+description
+name
+sort_order
+status
+store_id
+updated_at
+}
+}

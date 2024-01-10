@@ -1,0 +1,22 @@
+.root {
+    color: rgb(var(--venia-global-color-text));
+    font-size: 0.875rem;
+    line-height: 1rem;
+    padding: 0.625rem 0.125rem 0.125rem;
+    letter-spacing: 1px;
+}
+
+.root:empty {
+    display: none;
+}
+
+.root_error {
+    composes: root;
+    margin-bottom: 0;
+    color: var(--error-color) !important;
+    font-weight: 300;
+}
+p.root{
+    padding: 0px;
+    margin: 0px;
+}

@@ -1,0 +1,16 @@
+query getCustomerOrderList($current_page: Int, $limit: Int) {
+    customerOrderList(current_page: $current_page, limit: $limit) {
+        total_count
+        current_page
+        limit
+        items {
+            increment_id
+            id
+            created_at
+            grand_total
+            status
+            currency
+            ship_to
+        }
+    }
+}

@@ -1,0 +1,14 @@
+mutation applyStoreCredit(
+    $cart_id: String!
+    $amount:Float
+){
+applyStoreCreditToCart(
+input: {
+cart_id: $cart_id
+amount: $amount
+}
+) {
+status
+message
+}
+}

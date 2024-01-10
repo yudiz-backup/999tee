@@ -1,0 +1,24 @@
+query wrapperCategoryData{
+mpGiftWrapCategories(filter: {}, pageSize: 200, currentPage: 1) {
+items {
+category_id
+created_at
+customer_group
+description
+name
+sort_order
+status
+store_id
+updated_at
+}
+page_info {
+currentPage
+endPage
+hasNextPage
+hasPreviousPage
+pageSize
+startPage
+}
+total_count
+}
+}

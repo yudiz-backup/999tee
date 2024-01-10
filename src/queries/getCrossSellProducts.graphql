@@ -1,0 +1,40 @@
+query getProductsBySku($skus: [String], $pageSize: Int!) {
+    products(filter: { sku: { in: $skus } }, pageSize: $pageSize) {
+        items {
+            id
+            name
+            crosssell_products {
+                id
+                sku
+                stock_status
+                stock_status_data {
+                    qty
+                    stock_status
+                }
+                short_description {
+                    html
+                }
+                url_key
+                name
+                special_price
+                small_image {
+                    url
+                }
+                price {
+                    regularPrice {
+                        amount {
+                            currency
+                            value
+                        }
+                    }
+                    minimalPrice {
+                        amount {
+                            currency
+                            value
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+.root {
+    composes: root from './tile.css';
+    /* border-color: rgba(0, 0, 0, 0.1);
+    background: #f7f5f5;
+    color: var(--white-color); */
+    border-radius: 50%;
+    transform: scale(1);
+    transition: all 0.3s ease;
+    border: none;
+    width: 36px;
+    height: 36px;
+}
+.round_color {
+    height: 28px;
+    width: 28px;
+    background: var(--venia-swatch-bg);
+    --venia-swatch-bg: var(--venia-global-color-gray);
+    border-radius: 100%;
+}
+.root_selected {
+    border:2px solid var(--secondary-color) !important;
+    composes: root;
+    transform: scale(1.1);
+    padding: 2px;
+}
+.root {
+    padding: 2px;
+    border: 1px solid var(--black-color);
+}
+.root_focused {
+    composes: root;
+}
+.root_selected_focused {
+    composes: root_selected;
+}

@@ -1,0 +1,66 @@
+.root {
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    /* padding: 35px 0px 10px 0px; */
+    /* margin-top: 30px; */
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+}
+
+.text {
+    padding: 0.25rem;
+    color: var(--black-color);
+    font-family: var(--font-family); font-weight: var(--font_weight_l);
+    font-size: 13px;
+}
+
+.divider {
+    color: var(--text-color);
+    composes: text;
+    font-family: var(--font-family); font-weight: var(--font_weight_l);
+}
+
+.boldtext {
+   font-family: var(--font-family) !important; font-weight: var(--font_weight_m) !important;
+}
+
+.link {
+    composes: text;
+    text-decoration: underline;
+    color: var(--text-color);
+}
+.link:hover {
+    color: var(--text-color);
+}
+
+.currentCategory {
+    composes: text;
+   font-family: var(--font-family) !important; font-weight: var(--font_weight_m) !important;
+}
+
+@media screen and (min-width: 220px) and (max-width: 767px) {
+    .root {
+        padding: 25px 0 15px 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        white-space: inherit;
+    }
+    .root > * {
+        font-size: 14px;
+    }
+}
+
+.boldtext {
+    composes: text;
+   font-family: var(--font-family) !important; font-weight: var(--font_weight_m) !important;
+}
+
+@media(max-width: 480px) {
+    .root > * {
+        font-size: 13px;
+    }
+}

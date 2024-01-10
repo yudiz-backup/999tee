@@ -1,0 +1,76 @@
+.root {
+    composes: root from './storeSwitcher.css';
+}
+
+.trigger {
+    composes: trigger from './storeSwitcher.css';
+}
+
+.menu {
+    composes: menu from './storeSwitcher.css';
+}
+
+.menu_open {
+    composes: menu_open from './storeSwitcher.css';
+}
+
+.menuItem {
+    composes: menuItem from './storeSwitcher.css';
+}
+
+.symbol {
+    margin-right: 0px;
+    color: var(--white-color);
+}
+.label {
+    margin: 0 10px;
+}
+.select_img svg {
+    color: var(--white-color);
+}
+.drop_down_ing {
+    composes: drop_down_ing from './storeSwitcher.css';
+}
+
+.overlay {
+    background: var(--black-color);
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0.5;
+    display: none;
+}
+
+/*
+ * Desktop-specific styles.
+ */
+@media (min-width: 641px) {
+    .root:last-child:not(:only-child) {
+        padding-left: 10px;
+        grid-auto-flow: column;
+    }
+
+    .root:last-child:not(:only-child):before {
+        content: '';
+        border-left: 1px solid rgb(var(--venia-global-color-gray-darker));
+        border-left: 1px solid rgb(var(--venia-global-color-border));
+        width: 1rem;
+        height: 1em;
+    }
+}
+@media screen and (min-width: 220px) and (max-width: 767px) {
+    .symbol {
+        font-size: 15px;
+        color: var(--black-color);
+        margin-right: 5px;
+        margin-left: 2px;
+    }
+    .menu_open + div {
+        display: block;
+    }
+    .label {
+        composes: label from './storeSwitcher.css';
+    }
+}

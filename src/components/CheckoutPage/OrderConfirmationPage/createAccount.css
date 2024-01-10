@@ -1,0 +1,64 @@
+.root {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+}
+.root h2 {
+    font-size: 18px;
+    font-family: var(--font-family); font-weight: var(--font_weight_l);
+}
+.actions {
+    text-align: center;
+    padding-top: 20px;
+}
+.password_message{display: flex; flex-wrap: wrap; column-gap: 10px;}
+.password_message p{margin: 0px;}
+.create_account_button {
+    composes: root_normalPriority from '../../Button/button.css';
+}
+
+.subscribe {
+    margin-left: -5px;
+}
+.subscribe label {
+    justify-items: flex-start;
+}
+.subscribe span[class='checkbox-icon-1CV'] svg {
+    stroke: var(--black-color);
+    vertical-align: bottom;
+}
+.subscribe span[class='checkbox-icon-1CV'] {
+    text-align: center;
+}
+.subscribe [class='checkbox-checkboxItem-2jm'] a {
+    color: var(--black-color);
+}
+
+.subscribe [class="checkbox-root-2Ji"] > label{
+    margin-bottom: 0;
+}
+
+/*
+ * Desktop specific styles
+ */
+@media (min-width: 961px) {
+    .root {
+        position: sticky;
+        top: 170px;
+    }
+}
+
+/*
+ * Mobile-specific styles.
+ */
+@media (max-width: 960px) {
+    .root {
+        padding-top: 1rem;
+    }
+}

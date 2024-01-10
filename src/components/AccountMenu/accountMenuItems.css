@@ -1,0 +1,89 @@
+.root {
+    display: grid;
+    grid-auto-flow: row;
+    justify-content: stretch;
+    position: relative;
+    padding: 20px 0;
+}
+.root:after {
+    content: '';
+    position: absolute;
+    width: 13px;
+    height: 15px;
+    background: var(--primary-icon-hover-color);
+    right: 10px;
+    top: -8px;
+    transform: rotate(45deg);
+    box-shadow: var(--primary-box-shadow);
+    z-index: -1;
+}
+.customer_mail {
+    display: block;
+    padding: 10px !important;
+    font-family: var(--font-family) !important; font-weight: var(--font_weight_b) !important;
+    color: var(--secondary-dark-color);
+    font-size: 13px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.signOut{
+    font-family: var(--font-family) !important; font-weight: var(--font_weight_l) !important;
+}
+.link {
+    composes: root from '../LinkButton/linkButton.css';
+    color: var(--black-color);
+    /* justify-content: start; */
+    text-decoration: none;
+    padding: 10px 10px;
+    /* transition: 0.3s all;
+    -webkit-transition: 0.3s all;
+    -moz-transition: 0.3s all; */
+    composes: Transition from '../variables.css';
+    text-align: left;
+    font-family: var(--font-family); font-weight: var(--font_weight_l);
+    background-color: transparent;
+    font-size: 13px;
+    white-space: nowrap;
+    width: 250px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline;
+}
+.link:hover {
+    color: var(--white-color);
+    background-color: var(--black-color);
+}
+.signOut,
+.signOut:hover {
+    padding: 10px 10px 10px 10px;
+    color: var(--error-color);
+    font-family: var(--font-family); font-weight: var(--font_weight_l);
+    text-align: left;
+    font-size: 13px;
+}
+.active span,
+.active svg,
+.active .nav_text {
+    color: var(--base-color) !important;
+    stroke: var(--theme-color);
+}
+
+@media screen and (min-width: 220px) and (max-width: 767px) {
+    .link:hover {
+        color: var(--white-color);
+        background-color: transparent;
+    }
+    .root {
+        padding: 10px 15px;
+    }
+    .root:after {
+        display: none;
+    }
+    .customer_mail,
+    .signOut {
+        display: none;
+    }
+    .link {
+        padding: 15px 0;
+    }
+}

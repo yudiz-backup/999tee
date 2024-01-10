@@ -1,0 +1,5 @@
+mutation saveOrderComment($order_id: String!, $comment: String!) {
+    saveOrderComment(order_id: $order_id, comment: $comment) {
+        success
+    }
+}

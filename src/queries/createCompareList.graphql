@@ -1,0 +1,20 @@
+mutation createCompareList($products: ID) {
+    createCompareList(input: { products: [$products] }) {
+        uid
+        item_count
+        attributes {
+            code
+            label
+        }
+        items {
+            uid
+            product {
+                sku
+                name
+                description {
+                    html
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+.title {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--black-color);
+    font-family: var(--font-family) !important; font-weight: var(--font_weight_l) !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.label_title{
+   font-family: var(--font-family) !important; font-weight: var(--font_weight_m) !important;
+    letter-spacing: 1px;
+    font-size: 12px;
+}
+.selection {
+    font-size: 14px;
+    line-height: 1.5;
+    display: flex;
+}
+
+.selectionLabel {
+    margin-right: 10px;
+    font-size: 12px;
+    font-weight: unset;
+    color: var(--text-color);
+    font-family: var(--font-family); font-weight: var(--font_weight_l);
+    letter-spacing: 1px;
+}
+
+.selection dd {
+    font-family: var(--font-family); font-weight: var(--font_weight_l);
+    font-size: 14px;
+    color: var(--black-color);
+}
+
+.label_value_wrapper {
+    display: flex;
+}
+
+.error_message {
+    color: var(--error-color);
+}
+
+@media screen and (min-width: 220px) and (max-width: 767px) {
+    .root {
+        background-color: var(--white-color);
+    }
+}

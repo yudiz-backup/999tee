@@ -1,0 +1,8 @@
+query sizeOptions{
+  sizeoptions{
+  data{
+    sizeLabel
+    sizeValueId
+  }
+}
+}

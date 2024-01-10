@@ -1,0 +1,6 @@
+query giftWrapperStatus{
+    mpGiftWrapConfigSetting {
+      gift_wrap_type
+      gift_wrap_module_status
+    }
+  }

@@ -1,0 +1,93 @@
+.root {
+    background-color: var(--white-color);
+    bottom: 0;
+    display: grid;
+    grid-template-rows: 1fr 5rem;
+    height: 100%;
+    left: 0;
+    max-width: 360px;
+    opacity: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    transform: translate3d(-100%, 0, 0);
+    transition-duration: 192ms;
+    transition-timing-function: var(--venia-anim-out);
+    transition-property: opacity, transform, visibility;
+    visibility: hidden;
+    width: 100%;
+    z-index: 3;
+}
+
+.root_open {
+    composes: root;
+    box-shadow: 1px 0 rgb(var(--venia-border));
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition-duration: 224ms;
+    transition-timing-function: var(--venia-anim-in);
+    visibility: visible;
+}
+.root_open [class='filterModal-blocks-3EQ'] li:nth-child(2) form ul {
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.body {
+    border-bottom: 1px solid rgb(var(--venia-border));
+    overflow: auto;
+}
+
+.header {
+    padding: 15px 10px 7px 10px;
+}
+.header_box{
+    display: flex;
+    justify-content: space-between;
+}
+.headerTitle {
+    display: flex;
+    align-items: center;
+    font-size: 17px !important;
+    line-height: 14px;
+    font-family: var(--font-family); font-weight: var(--font_weight_l);
+    margin: 0;
+    width: 60%;
+    justify-content: space-between;
+}
+.menu_root {
+    composes: menu_root from '../FilterSidebar/filterSidebar.css';
+}
+.reset_btn_wrap {
+    composes: reset_btn_wrap from '../FilterSidebar/filterSidebar.css';
+}
+.blocks {
+    background: var(--white-color);
+    margin-bottom: 0;
+}
+.blocks li:nth-child(2) form ul {
+    grid-template-columns: repeat(2, 1fr);
+}
+.filters_wrapper_inner {
+    box-shadow: var(--primary-box-shadow);
+    margin-top: 15px;
+}
+.filters_heading {
+    font-size: 15px;
+    color: var(--black-color);
+    background: var(--white-color);
+    padding: 15px 10px;
+    font-family: var(--font-family); font-weight: var(--font_weight_l);
+    margin: 0;
+    border-bottom: 1px solid var(--border-color);
+}
+.action {
+}
+@media screen and (max-width: 767px) {
+    .header {
+        padding: 13px;
+        border-bottom: 1px solid var(--border-color);
+    }
+    .action {
+        padding: 10px;
+    }
+}

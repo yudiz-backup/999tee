@@ -1,0 +1,15 @@
+query getAddressData($id: Int!) {
+    addressData(id: $id) {
+        entity_id
+        firstname
+        lastname
+        street
+        city
+        country_id
+        region
+        region_id
+        postcode
+        telephone
+        company
+    }
+}

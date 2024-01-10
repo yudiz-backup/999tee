@@ -1,0 +1,30 @@
+.wrapper {
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-template-areas: 'input icon';
+    grid-template-columns: auto 2.25rem;
+    height: 2.25rem;
+}
+
+.input,
+.input_error {
+    composes: input from '../Field/field.css';
+    grid-area: input-start / input-start / input-end / icon-end;
+    padding-right: calc(2.25rem - 1px);
+}
+
+.input:disabled {
+    pointer-events: none;
+    color: var(--ced-light-gray-color);
+}
+
+.input_error {
+    border-color: var(--error-color);
+}
+
+/* rtl */
+body[class='rtl_view'] .input,
+body[class='rtl_view'] .input_error {
+    padding-left: calc(2.25rem - 1px);
+    padding-right: 0;
+}

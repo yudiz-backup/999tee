@@ -1,0 +1,3 @@
+query getUseStripeSdkUrl($order_id: String!){
+  getUseStripeSdkUrl(order_id: $order_id)
+}

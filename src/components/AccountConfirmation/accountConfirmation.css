@@ -1,0 +1,89 @@
+.confirmation_page {
+    background: var(--white-color);
+    margin: 35px auto;
+    text-align: center;
+    padding: 15px;
+    box-shadow: var(--primary-box-shadow);
+    width: 600px;
+    margin: 0;
+}
+ 
+.confirmation_page_wrapper {
+    display: grid;
+    place-items: center;
+    height: calc(100vh - 126px);
+    margin-top: -75px;
+}
+
+.page_title_wrapper {
+    margin-top: 20px;
+}
+.secondary a{text-decoration: none !important;}
+.page_title {
+    composes: title from '../SignIn/signIn.css';
+}
+
+.confirm_img {
+    margin-bottom: 15px;
+}
+
+.base {}
+
+.form {}
+
+.send {}
+
+.confirmation {}
+
+.fieldset {}
+
+.field {
+    margin: 20px 0;
+    display: inline-block;
+    text-align: left;
+    width: 280px;
+}
+
+
+.note {
+    color: var(--secondary-dark-color);
+    margin-top: 10px;
+    display: block;
+    margin-bottom: 0;
+}
+
+.email {}
+
+.control {}
+
+.input_text {
+    width: 100%;
+    border: 1px solid var(--border-color);
+    padding: 7px;
+    border-radius: 3px;
+}
+
+.input_text:focus {}
+
+.actions_toolbar {}
+
+.primary {}
+
+.secondary span {
+    display: inline-block !important;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* media */
+@media only screen and (min-width: 220px) and (max-width: 767px) {
+    .confirmation_page {
+        width: 90%;
+    }
+
+    .field {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+}

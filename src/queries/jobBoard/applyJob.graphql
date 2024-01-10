@@ -1,0 +1,31 @@
+mutation applyJob(
+    $name: String!
+    $filecontent: String!
+    $address: String!
+    $qualification: String!
+    $firstname: String!
+    $lastname: String!
+    $email: String!
+    $experience: String!
+    $position: String
+    $company: String
+    $positionForApply: String!
+)
+{
+  applyJob(
+    name: $name
+    filecontent: $filecontent
+    address: $address
+    qualification: $qualification
+    firstname: $firstname
+    lastname: $lastname
+    email: $email
+    experience: $experience
+    position: $position
+    company: $company
+    positionForApply: $positionForApply
+  ) {
+    result
+    uniqueId
+  }
+}

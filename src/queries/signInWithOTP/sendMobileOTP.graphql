@@ -1,0 +1,11 @@
+mutation sendMobileOTP(
+    $mobileNumber: String
+    $websiteId: Int
+){
+  loginOTP(
+      mobileNumber: $mobileNumber,
+      websiteId: $websiteId) {
+    message
+    status
+  }
+}

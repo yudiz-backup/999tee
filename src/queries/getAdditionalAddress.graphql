@@ -1,0 +1,28 @@
+query getAddressCollection(
+    $default_billing: Int
+    $default_shipping: Int
+    $current_page: Int
+    $limit: Int
+) {
+    addressCollection(
+        default_billing: $default_billing
+        default_shipping: $default_shipping
+        current_page: $current_page
+        limit: $limit
+    ) {
+        total_count
+        current_page
+        limit
+        item {
+            entity_id
+            firstname
+            lastname
+            street
+            city
+            country_id
+            region
+            postcode
+            telephone
+        }
+    }
+}

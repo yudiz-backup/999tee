@@ -1,0 +1,57 @@
+.root {
+    height: 100%;
+}
+
+.contents {
+    display: grid;
+    grid-template-rows: auto auto;
+    margin-top: 1.125rem;
+    row-gap: 0.5rem;
+    text-align: left;
+}
+
+.editButton {
+    color: rgb(var(--venia-brand-color-1-700));
+    padding: 1rem;
+    margin: -1rem;
+}
+.editButton span,
+.editIcon {
+    color: var(--base-color);
+    stroke: var(--theme-color);
+}
+
+.error {
+    align-self: center;
+    color: var(--error-color);
+    line-height: var(--venia-global-lineHeight-300);
+}
+
+.free {
+    text-transform: uppercase;
+}
+
+.heading {
+    composes: cardTitle from '../ShippingInformation/shippingInformation.css';
+    font-weight: unset;
+}
+
+.titleContainer {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr;
+}
+
+/* rtl */
+body[class='rtl_view'] .contents {
+    text-align: right;
+}
+
+/*
+ *  Mobile-specific styles.
+ */
+@media (max-width: 960px) {
+    .editButtonText {
+        display: none;
+    }
+}

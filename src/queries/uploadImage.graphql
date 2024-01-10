@@ -1,0 +1,9 @@
+mutation uploadImage($images: String){
+  customerProfile(input:{
+    images:$images
+  }
+  ){
+    message
+    profileUpdatedImage
+  }
+}

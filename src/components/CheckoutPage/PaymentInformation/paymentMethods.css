@@ -1,0 +1,47 @@
+.root {
+    display: grid;
+}
+
+.payment_method {
+    border-bottom: 1px solid rgb(var(--venia-global-color-border));
+    margin-bottom: 15px;
+}
+
+.payment_method:last-of-type {
+    margin-bottom: 0;
+}
+
+.radio_label {
+    justify-self: start;
+    cursor: pointer;
+   font-family: var(--font-family) !important; font-weight: var(--font_weight_m) !important;
+    letter-spacing: 1px;
+    font-size: 13px !important;
+}
+
+.payment_errors {
+    display: grid;
+    gap: 0.5em;
+    color: rgb(var(--venia-global-color-error));
+}
+
+.copyright {
+    text-align: center;
+}
+
+.payment_icons {
+    margin-top: 0px;
+}
+.payment_icons ul{
+    flex-wrap: wrap;
+}
+.payment_icons li {
+    cursor: default;
+    margin: 4px;
+    display: inline-block;
+}
+
+.payment_icons li svg {
+    max-width: 40px;
+    min-height: 24px;
+}

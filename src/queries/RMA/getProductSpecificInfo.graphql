@@ -1,0 +1,10 @@
+query getProductSpecificInfo($order_id: String){
+  getProductSpecific(order_id: $order_id) {
+   data {
+      image
+      product_id
+      product_name
+      product_sku
+    }
+  }
+}

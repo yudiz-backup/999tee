@@ -1,0 +1,17 @@
+mutation setRzpPaymentDetailsForOrder(
+    $order_id: String!,
+    $rzp_payment_id: String!,
+    $rzp_signature: String!
+){
+  setRzpPaymentDetailsForOrder (
+    input: {
+      order_id: $order_id,
+      rzp_payment_id: $rzp_payment_id,
+      rzp_signature: $rzp_signature
+    }
+  ){
+  order{
+    order_id
+  }
+  }
+}

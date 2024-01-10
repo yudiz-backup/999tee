@@ -1,0 +1,9 @@
+.root {
+    composes: root from '../clickable.css';
+}
+
+@media screen and (min-width: 220px) and (max-width: 767px) {
+    .root {
+        vertical-align: middle;
+    }
+}

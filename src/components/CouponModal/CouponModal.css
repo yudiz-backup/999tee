@@ -1,0 +1,45 @@
+.modal_content{
+    position: relative;
+
+}
+.modal_header{
+    padding: 8px 10px;
+    display: flex;
+    align-items: center;
+}
+.modal_header button{
+    display: flex;
+}
+.modal_header h5{
+    text-transform: capitalize;
+}
+.sure_footer button svg{
+    stroke-width: 1.2;
+    max-width: 20px;
+  
+}
+.sure_footer button{
+    position: absolute;
+    top: 0;
+    right: 8px;
+}
+.sure_footer{
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   border-top: 0px;
+   margin: 0 auto;
+   padding: 20px;
+}
+.sure_footer img{
+    margin: 0 auto;
+    max-width: 140px;
+}
+.sure_footer h3{
+    font-family: var(--font-family) !important; font-weight: var(--font_weight_m) !important; 
+    font-size: 18px;
+    display: block;
+}
+.sure_footer h3 span{
+    font-family: var(--font-family) !important; font-weight: var(--font_weight_m) !important;
+}

@@ -1,0 +1,47 @@
+query getRefunds($order_id: Int!) {
+    creditMemoDetails(order_id: $order_id) {
+        can_creditmemo
+    cgst_amount
+    creditmemo_subtotal
+    creditmemo_total
+    discount_amount
+    discount_amount_for_refund
+    discount_description
+    grand_total
+    hasCreditmemos
+    hasInvoices
+    hasShipments
+    mp_extra_fee
+    order_date
+    order_number
+    order_status
+    refunds {
+      created_at
+      grand_total
+      increment_id
+      item{
+         options{
+          option_label
+          value_label
+        }
+        price
+        product_name
+        sku
+        subtotal
+      }
+      shipping_amount
+      subtotal
+    }
+    sgst_amount
+    shipping
+    shipping_cgst_amount
+    shipping_sgst_amount
+    subtotal
+    tax
+    tax_for_refund
+    applied_store_credit
+    gift_wrap
+    igst_amount
+    shipping_igst_amount
+    }
+}

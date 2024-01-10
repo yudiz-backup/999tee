@@ -1,0 +1,191 @@
+.root {
+    display: grid;
+    gap: 0.9375rem;
+    justify-items: stretch;
+    padding: 10px;
+}
+
+.form_details {
+    display: flex;
+    flex-direction: row;
+}
+
+.image_signin {
+    width: 100%;
+}
+.one_input_grp{display: flex; gap: 16px;}
+.one_input_grp [class='field-root-2gS']{width: 100%;}
+.gender {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    padding-left: 15px;
+    accent-color: #000
+}
+.passValidations{
+    color:#707070;
+    padding-left: 12px;
+    font-weight: bold;
+}
+.passGreenTick{
+    color: #00853d;
+    font-weight: bold;
+
+}
+
+.password_message{
+    display: flex;
+}
+.password_message p{
+    padding-left: 0;margin-bottom: 0;
+}
+.password_message p:not(:last-child){
+    margin-right: 10px;
+}
+.formCheck:first-child {
+    padding-right: 28px;
+}
+.gender label {
+    text-transform: capitalize;
+   font-family: var(--font-family) !important; font-weight: var(--font_weight_m) !important;
+    font-size: 14px;
+}
+.gender [class='form-check-input'] {
+    accent-color: var(--black-color);
+}
+.image_signin {
+    height: 460px;
+    width: 100%;
+    border-radius: 20px 0 0 20px;
+}
+
+.message {
+    background-color: rgb(var(--venia-global-color-gray));
+    border-radius: 4px;
+    font-size: 0.875rem;
+    /* line-height: 1.25rem; */
+    width: 100%;
+    margin: 0 0 10px 0;
+    padding: 10px;
+}
+
+.message:empty {
+    display: none;
+}
+
+.actions {
+    align-items: center;
+    display: grid;
+    gap: 1rem;
+    grid-auto-flow: column;
+    text-align: center;
+}
+
+.submitButton {
+    composes: root_highPriority from '../Button/button.css';
+    min-width: 11rem;
+}
+.submitButton span {
+    font-family: var(--font-family); font-weight: var(--font_weight_l);
+}
+.success_msg {
+    color: var(--success-color);
+}
+.subscribe {
+    margin-left: -5px;
+}
+.subscribe label {
+    justify-items: flex-start;
+}
+.subscribe span[class='checkbox-icon-1CV'] svg {
+    stroke: var(--black-color);
+    vertical-align: bottom;
+}
+.subscribe span[class='checkbox-icon-1CV'] {
+    text-align: center;
+}
+.subscribe [class='checkbox-checkboxItem-2jm'] a {
+    color: var(--black-color);
+}
+
+.subscribe [class="checkbox-root-2Ji"] > label{
+    margin-bottom: 0;
+}
+.create_account_term_and_condition {
+   font-family: var(--font-family) !important; font-weight: var(--font_weight_m) !important;
+    color: #000000;
+}
+.create_account_term_and_condition:hover {
+    color: #000000;
+}
+.check_box_class label{
+    align-items: flex-start !important;
+}
+.password_message{
+    display: flex;
+    flex-wrap: wrap;
+    white-space: nowrap;
+}
+.t_and_c{position: relative;}
+.t_and_c span[class="checkbox-icon-1CV"]{position: absolute; top: -2px ;}
+.t_and_c .condiotion_text{padding-left: 7px;}
+
+
+
+.input {
+    background: var(--white-color);
+    border: 1px solid var(--border-color);
+    border-radius: 3px;
+    color: var(--black-color);
+    display: inline-flex;
+    flex: 0 0 100%;
+    font-size: 13px;
+    height: 2.5rem;
+    margin: 0;
+    max-width: 100%;
+    padding: calc(0.375rem - 1px) calc(0.625rem - 1px);
+    width: 100%;
+    -webkit-appearance: none;
+    letter-spacing: 1px;
+
+}
+
+.input:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+.input_error {
+    border-color: var(--error-color) !important;
+}
+@media screen and (min-width: 220px) and (max-width: 767px) {
+    .actions{text-align: left !important;}
+    .root {
+        padding: 0;
+    }
+}
+.checkbox_input{
+    margin-bottom: 10px;
+    position: relative;
+}
+.checkbox_input .check_box label{padding-left: 8px !important;}
+.terms_conditions {padding-left: 8px;}
+.checkbox_input label{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 0;
+}
+
+.checkbox_input :is([class="checkbox-checkboxItem-2jm"]){ 
+    display: none;
+}
+
+@media (max-width: 767px) {
+
+    .gender [class='form-check-input'] {
+        margin-top: 2px;
+    }
+    .gender label { margin-left: 2px; }
+}

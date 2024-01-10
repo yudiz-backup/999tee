@@ -1,0 +1,15 @@
+query instaSectionGallery{
+  insta{
+    data{
+       instaId
+      instaImage
+      instaTitle
+      product_id
+      name
+      sku
+      price
+      productImage
+      productUrl
+    }
+  }
+}

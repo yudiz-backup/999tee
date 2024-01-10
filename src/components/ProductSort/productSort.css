@@ -1,0 +1,158 @@
+.root {
+    position: relative;
+    /* box-shadow: var(--primary-box-shadow);
+     flex: 1; */
+    width: 250px;
+    margin-left: auto;
+}
+@keyframes searchOpen {
+    0% {
+        transform: translateY(10%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+@-webkit-keyframes searchOpen {
+    0% {
+        -webkit-transform: translateY(10%);
+    }
+    to {
+        -webkit-transform: translateY(0);
+    }
+}
+.sortItemms{
+    margin: 0 auto;
+    text-transform: capitalize;
+}
+.menu {
+    min-width: 10rem;
+    font-size: 1rem;
+    color: var(--black-color);
+    text-align: left;
+    list-style: none;
+    background-color: var(--white-color);
+    background-clip: padding-box;
+    animation: searchOpen 0.5s;
+    -webkit-animation: searchOpen 0.5s;
+    position: absolute;
+    z-index: 99;
+    top: 40px;
+    width: 100%;
+}
+
+.menuItem {
+    border-bottom: 1px solid #fafafa;
+
+}
+
+.menuItem:last-child {
+    border-bottom: none;
+}
+
+.menuItem:hover {
+    background-color: rgb(var(--venia-global-color-gray));
+}
+.root_inner {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 0 10px 10px;
+    position: relative;
+    width: 100%;
+}
+.sort_title {
+    font-family: var(--font-family) !important; font-weight: var(--font_weight_l) !important;
+    color: var(--black-color);
+    font-size: 14px;
+    margin: 0 auto;
+}
+.sorted_result {
+    color: var(--text-color);
+    /* margin: 0 10px; */
+    display: inline-flex;
+    flex: 0 0 calc(100% - 120px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    justify-content: center;
+    font-weight: 300;
+    letter-spacing: 2.5px;
+    display: none;
+}
+.sortButton {
+    composes: root_lowPriority from '../../components/Button/button.css';
+    width: 100%;
+    display: flex;
+    border: 0;
+    background: var(--white-color);
+    justify-content: flex-start;
+    padding: 0 15px;
+    /* box-shadow: var(--primary-box-shadow); */
+}
+.sortButton > span {
+    width: 100%;
+    justify-content: flex-start;
+    display: flex;
+}
+.desktopText {
+    display: flex;
+    width: 100%;
+    padding: 0;
+    justify-content: space-between;
+    letter-spacing: 2px;
+    
+}
+
+.sortText {
+    line-height: 24px;
+    font-size: var(--venia-global-fontSize-200);
+}
+
+.desktopIconWrapper {
+    composes: root from '../Icon/icon.css';
+    transform: translateX(10px);
+    margin-right: 5px;
+}
+
+.desktopIcon {
+    composes: icon from '../Icon/icon.css';
+    stroke: var(--black-color);
+}
+.menu ul {
+    margin-bottom: 0;
+}
+@media (max-width: 767px) {
+    .root{width: 100%;}
+    .sortButton {
+        border-color: rgb(var(--venia-global-color-gray-500));
+        border-radius: 6px;
+        font-weight: var(--venia-global-fontWeight-normal);
+        text-transform: none;
+    }
+    /* .sortButton span {
+        justify-content: center !important;
+        font-family: var(--font-family); font-weight: var(--font_weight_l);
+    } */
+    .root {
+        box-shadow: unset;
+        /* border-left: 1px solid var(--border-color); */
+    }
+    .menu {
+        position: absolute;
+        z-index: 9999;
+        left: 0;
+        width: 100%;
+        box-shadow: var(--primary-box-shadow);
+    }
+}
+
+@media (max-width: 680px) {
+    .sortButton span {
+        font-size: 13px;
+    }
+    .sorted_result {
+        flex: 1;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,16 @@
+.container {
+    margin: 20px auto 20px;
+    background: var(--white-color);
+    width: 500px;
+    padding: 15px;
+    box-shadow: var(--primary-box-shadow);
+}
+.container div[class='text-right'] {
+    display: none;
+}
+@media screen and (min-width: 220px) and (max-width: 767px) {
+    .container {
+        width: calc(100% - 30px);
+        padding: 0;
+    }
+}

@@ -1,0 +1,103 @@
+.root {
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+
+.field {
+    grid-column-end: span 2;
+}
+
+.email,
+.country,
+.street0,
+.street1,
+.city,
+.region,
+.postcode,
+.telephone {
+    composes: field;
+}
+
+.firstname,
+.lastname {
+    grid-column-end: span 1;
+}
+.shop_button_wrap{
+    text-align: center;
+    margin-top: 30px;
+    display: flex;
+    column-gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.shop_login{
+    display: grid;
+    gap: 1rem;
+}
+.buttons {
+    composes: field;
+    display: grid;
+    gap: 1rem;
+    grid-auto-flow: column;
+    justify-self: center;
+    padding: 0rem;
+}
+.buttons button{
+    margin-top: 16px;
+}
+@media (max-width: 960px) {
+    .firstname {
+        grid-column: 1 / span 2;
+    }
+
+    .lastname {
+        grid-column: 1 / span 2;
+    }
+}
+
+.checkbox_input{
+    margin-bottom: 10px;
+}
+.checkbox_input label{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 0;
+}
+
+.checkbox_input :is([class="checkbox-checkboxItem-2jm"]){
+    display: none;
+}
+
+.is_subscribe1{
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+.is_subscribe1> label{
+    margin-bottom: 0 !important;
+}
+
+.is_subscribe1 :is([class="checkbox-checkboxItem-2jm"],input){
+    display: none;
+}
+.is_subscribe1 span{
+    margin-right: 0 !important;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px)
+{
+    .shop_button_wrap{
+        margin-bottom: 30px;
+    }
+}
+@media only screen  and (max-width: 767px)
+{
+    .shop_button_wrap{
+        text-align: left;
+        justify-content: flex-start !important;
+        margin-top: 16px;
+    }
+}

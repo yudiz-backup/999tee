@@ -1,0 +1,89 @@
+query getCartDetails($cartId: String!) {
+    cart(cart_id: $cartId) {
+        id
+        is_virtual
+        available_payment_methods {
+            code
+            title
+        }
+        items {
+            id
+            mp_gift_wrap_data{
+                all_cart
+                wrap_id
+                use_gift_message
+                updated_at
+                status
+                sort_order
+                price_type
+                price
+                name
+                amount
+                category
+                created_at
+              }
+            prices {
+                price {
+                    value
+                }
+                row_total {
+                    value
+                }
+            }
+            product {
+                id
+                name
+                sku
+                
+                small_image {
+                    url
+                    label
+                }
+                price {
+                    regularPrice {
+                        amount {
+                            value
+                        }
+                    }
+                    minimalPrice {
+                        amount {
+                            currency
+                            value
+                        }
+                    }
+                }
+            }
+            quantity
+            ... on ConfigurableCartItem {
+                configurable_options {
+                    id
+                    option_label
+                    value_id
+                    value_label
+                }
+                configured_variant{
+                stock_status
+                sku
+              }
+            }
+        }
+        prices {
+            grand_total {
+                value
+                currency
+            }
+        }
+        mp_reward_segments{
+                code
+                title
+                value
+        }
+        validate_quote {
+            message
+            success
+        }
+          storecredit_applied {
+            base_bss_storecredit_amount
+        }
+    }
+}

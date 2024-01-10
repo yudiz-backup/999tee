@@ -1,0 +1,408 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.img-info-dot {
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    z-index: 1;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    background-color: var(--white-color);
+    border-radius: 50%;
+    border: 0;
+    animation-name: Hotspot_Pulse__gLGRC;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 0.15s;
+}
+.tool_tip_wrapper{
+   position: absolute;
+   left: 20px;
+   bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.hover_wrapper{
+    padding: 12px;
+    background-color: white;
+}
+.thumbnail_tooltip{
+    width: 60px;
+    min-width: 60px;
+    aspect-ratio: 1/1.2;
+}
+.thumbnail_tooltip img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.tool_tip_wrapper img{
+    max-width: 100px;
+}
+.tool_tip_wrapper a{
+ margin-left: 44px;
+    transition: all 0.3s ease;
+    display: none;
+}
+.tool_tip_wrapper:hover a{
+    display: inline-block;
+}
+.tool_tip_wrapper a:hover{
+    display: inline-block;
+}
+.card_hover{
+    display: flex;
+    max-width: 210px;
+    position: relative;
+}
+.card_hover::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    transform: translateY(-50%);
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 6px 10.4px 6px 0;
+    border-color: transparent white transparent transparent;
+}
+.tool_tip_wrapper button{
+   position: absolute;
+   bottom: 26px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 0;
+    animation-name: Hotspot_Pulse__gLGRC;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+    transition-duration: .15s;
+}
+.tool_tip_wrapper button:hover ~ a{
+display: inline-block;
+}
+.tool_tip_wrapper .title{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* number of lines to show */
+            line-clamp: 1; 
+    -webkit-box-orient: vertical;
+    font-weight: 500;
+}
+.style_thumbnail{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.fs-tag-arrow {
+    padding-right: 5px;
+    display: flex;
+    align-items: center;
+}
+.insta_hover_wrapper{
+    position: relative;
+}
+@keyframes Hotspot_Pulse__gLGRC {
+    0% {
+        box-shadow: 0 0 0 0 hsl(0deg 0% 100% / 70%);
+    }
+
+    70% {
+        box-shadow: 0 0 0 12px hsl(0deg 0% 100% / 0%);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 hsl(0deg 0% 100% / 0%);
+    }
+}
+
+.style-insta-element {
+    position: relative;
+    height: 100%;
+}
+
+.clothing-info-box {
+    position: absolute;
+    /* top: 50%; */
+    left: 50%;
+    bottom: -60px;
+    /* transform: translate(-50%, -50%); */
+}
+
+.clothing-info-hover {
+    position: relative;
+}
+.clothing_info_box{
+    top: unset !important;
+    bottom: 60px !important;
+    left: 2% !important;
+    transform: unset !important;
+    
+}
+.clothing_info_box .btn_product_dot{
+    top: calc(100% + 34px);
+    border-top-color: hsla(0, 0%, 100%, .95);
+}
+.clothing_info_box .clothing_info_hover::before{
+top: calc(100% + 19px);
+border-top-color: hsla(0, 0%, 100%, .95);
+border-bottom-color: transparent;
+}
+
+.clothing-info-hover:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 10px solid transparent;
+    border-bottom-color: hsla(0, 0%, 100%, 0.95);
+    position: absolute;
+    -webkit-transform: translate(-50%, -100%) scaleX(0.5);
+    transform: translate(-50%, -100%) scaleX(0.5);
+    z-index: 999;
+}
+
+.fs-tag-detail {
+    display: -webkit-box;
+    display: flex;
+    z-index: 2;
+    font-weight: 400;
+    background-color: hsla(0, 0%, 100%, 0.95);
+    width: 250px;
+    overflow: hidden;
+}
+
+.fs-tag-detail__thumbnail {
+    width: 33%;
+    max-width: none;
+    min-width: 60px;
+}
+
+.fs-thumbnail__image {
+    display: block;
+    max-width: 100%;
+    min-height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    opacity: 1;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+}
+
+.fs-tag-detail__product {
+    color: #222;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-flex: 2;
+    flex-grow: 2;
+    margin: 10px;
+    
+}
+
+div [class="fs-tag-detail__product-price fs-text -fs-md -fs-secondary"],
+div[class="fs-tag-detail__product-name fs-text -fs-md"]{
+    font-family: var(--font-family); font-weight: var(--font_weight_l);
+    letter-spacing: 1px;
+}
+
+.fs-text.-fs-md {
+    font-size: 0.875em;
+}
+
+.fs-text {
+    font-family: var(--font-family);
+    color: #222;
+    font-size: 100%;
+    line-height: 1.25;
+}
+
+.fs-tag-detail__product-price {
+    padding-top: 6px;
+}
+
+.fs-entry__detail .fs-tag-detail .fs-tag-arrow {
+    margin: auto 10px;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.clothing-highlighter {
+    top: -10%;
+    transform: translate(-50%, -100%);
+}
+
+.grid-view-box {
+    display: flex;
+    flex-wrap: wrap;
+}
+.grid_view li > div img { object-fit: cover; height: 100%; }
+.grid-view-box li {
+    list-style-type: none;
+}
+
+.inner-element > li {
+    padding: 6px;
+}
+
+/* .grid-view-box > li.grid-column-view {
+    width: calc(100% / 3);
+} */
+.style-insta-element .img_box {
+    object-fit: cover;
+    max-width: 100%;
+    object-position: center;
+    width: 100%;
+}
+
+.style-on-insta-grid {
+    box-sizing: border-box;
+}
+.grid_view{
+    /* column-gap: 1rem;
+    column-count: 3; */
+    display: flex; display: -webkit-flex; gap: 16px; flex-wrap: wrap; -webkit-flex-wrap: wrap;
+}
+.grid_view > li{
+    width: calc((100% / 3) - 10.77px);
+}
+.grid_view > li .insta_hover_wrapper { height: 100%; }
+.style-on-insta-grid a {
+    display: block;
+    text-decoration: none;
+}
+
+.style-on-insta-grid h2 {
+    margin-bottom: 30px;
+}
+
+.fs-tag-detail__product-name span {
+    text-decoration: none;
+    border: 0;
+    outline: none;
+    box-shadow: none;
+}
+
+.clothing-info-hover {
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.clothing-info-box:hover .clothing-info-hover {
+    opacity: 1;
+}
+
+.banner-tooltip:hover .clothing-info-hover {
+    opacity: 1;
+}
+
+.clothing-info-hover a {
+    text-decoration: none;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .grid-view-box > li.grid-column-view {
+        width: calc(100% / 2);
+    }
+
+    .fs-tag-detail {
+        width: 160px;
+    }
+}
+
+@media (max-width: 767px) {
+    .tool_tip_wrapper a{
+        margin-left: 32px;
+    }
+    .tool_tip_wrapper{
+        left: 10px;
+        bottom: 10px;
+    }
+    .thumbnail_tooltip{
+        width: 40px;
+        min-width: 40px;
+    }
+    .grid-view-box > li.grid-column-view {
+        width: 100%;
+    }
+
+    .fs-tag-detail {
+        width: 160px;
+    }
+}
+
+@media (max-width: 575px) {
+    .grid-view-box > li.grid-column-view {
+        width: 100%;
+    }
+}
+
+.richContent-root-11l .insta-features-section img.img-box {
+    margin-top: 0 !important;
+}
+
+.richContent-root-11l .insta-features-section ul li {
+    padding: 0;
+}
+
+.richContent-root-11l .insta-features-section ul.grid-view-box {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.richContent-root-11l .insta-features-section ul.inner-element {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.richContent-root-11l .insta-features-section .fs-tag-detail__thumbnail img {
+    margin: 0;
+}
+
+.loadmore {
+    margin-top: 20px !important;
+    height: 70px;
+    width: 240px;
+    margin: 0 auto;
+    background: transparent;
+    border: 1px solid #ccc;
+    composes: flexCenter from '../variables.css';
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+@media(max-width: 991px) {
+    .grid_view li { width: calc((100% / 2) - 8px);  margin-bottom: 0px !important;}
+    .grid_view li > div, .grid_view li > div img { height: 100%; width: 100%; }
+
+
+}
+@media (max-width: 767px) {
+    .loadmore {
+        height: 50px;
+        width: 200px;
+        margin: 20px auto 30px;
+    }
+    /* .grid_view{
+        column-count: 2;
+    } */
+}

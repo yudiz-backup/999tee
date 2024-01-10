@@ -1,0 +1,11 @@
+query getAllStores {
+    getAllStores {
+        data {
+            store_name
+            storeview_name {
+                code
+                name
+            }
+        }
+    }
+}

@@ -1,0 +1,3 @@
+query rmaOrderIdConfig($storeId: String){
+  mpRMAConfig(storeId: $storeId)
+}

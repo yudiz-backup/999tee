@@ -1,0 +1,34 @@
+.root {
+    border: none;
+    border-radius: 0px;
+    border-bottom: 2px solid var(--border-color);
+    display: grid;
+    row-gap: 1rem;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+.root:last-child {
+    border-bottom: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.done {
+    composes: root;
+    border-radius: 3px;
+}
+
+.editingHeading {
+    font-family: var(--font-family); font-weight: var(--font_weight_l);
+    font-size: 18px;
+}
+
+.form {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    row-gap: 1.5rem;
+}
+
+.formButtons {
+    display: flex;
+    justify-content: center;
+}

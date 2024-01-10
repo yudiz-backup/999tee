@@ -1,0 +1,12 @@
+.root {
+    padding-bottom: 1rem;
+}
+.root > span {
+    width: 100%;
+}
+.root input {
+    padding-left: 10px;
+}
+.root > span > span:nth-child(2) {
+    min-width: 20%;
+}

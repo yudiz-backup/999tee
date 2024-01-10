@@ -1,0 +1,136 @@
+.root {
+    composes: root from '../clickable.css';
+    border-radius: 3px;
+    max-width: 100%;
+    min-width: 9rem;
+    padding: 10px;
+    min-height: 35px;
+    max-height: 35px;
+    transition-duration: 256ms;
+    transition-property: background-color, border-color, color;
+    transition-timing-function: var(--venia-global-anim-standard);
+}
+
+/**
+ * Some browsers retain the :hover state after a click, this ensures if a button becomes disabled after
+ * being clicked it will be visually disabled.
+ */
+.root:disabled,
+.root:hover:disabled {
+    pointer-events: none;
+    background: #ccc !important;
+    border-color: #ccc !important;
+    letter-spacing: 1px;
+}
+.root:disabled span,
+.root:hover:disabled span {
+    color: var(--white-color);
+}
+.content {
+    align-items: center;
+    display: inline-grid;
+    gap: 0.35rem;
+    grid-auto-flow: column;
+    justify-content: center;
+    justify-items: center;
+    font-family: var(--font-family) !important; font-weight: var(--font_weight_l) !important;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* derived classes */
+.root_lowPriority {
+    composes: root;
+    border: 1px solid var(--black-color);
+}
+.root_lowPriority:hover {
+    --stroke: var(--black-color);
+    background: var(--white-color);
+}
+.root_lowPriorityNegative {
+    composes: root_lowPriority;
+    --stroke: var(--error-color);
+}
+.root_lowPriorityNegative:hover {
+    --stroke: var(--error-color);
+}
+
+.root_normalPriority {
+    composes: root;
+    color: var(--black-color);
+    background: var(--white-color);
+    border: 1px solid var(--black-color);
+}
+.root_normalPriority span {
+    color: var(--black-color);
+}
+.root_normalPriority:hover {
+    color: var(--black-color);
+    background: var(--white-color);
+}
+.root_normalPriorityNegative {
+    composes: root_normalPriority;
+    --stroke: var(--error-color);
+}
+.root_normalPriorityNegative:hover {
+    --stroke: var(--error-color);
+}
+
+.root_highPriority {
+    composes: root;
+    border: 1px solid var(--black-color);
+    position: relative;
+    background-color: var(--black-color);
+   font-family: var(--font-family) !important; font-weight: var(--font_weight_m) !important;
+    transition: all 0.3s ease;
+}
+.root_highPriority:hover {
+    background-color: var(--button-hover-color);
+}
+.root_highPriority span {
+    color: var(--white-color);
+    font-family: var(--font-family) !important; font-weight: var(--font_weight_m) !important;
+}
+
+/* .root_highPriority::before {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 0px;
+    content: '';
+    color: #000 !important;
+    background: var(--black-color);
+    transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+} */
+/* .root_highPriority:hover::before {
+    right: 0%;
+    left: auto;
+    width: 100%;
+} */
+.root_highPriorityNegative {
+    composes: root_highPriority;
+    --stroke: var(--error-color);
+}
+.root_highPriorityNegative:hover {
+    --stroke: var(--error-color);
+}
+
+@media screen and (min-width: 220px) and (max-width: 991px) {
+    .root_highPriority {
+        background-color: var(--black-color);
+    }
+    .root_highPriority span {
+        color: var(--white-color);
+    }
+}
+@media only screen  and (max-width: 767px)
+{
+    .content{
+        font-size: 12px;
+        line-height: 14px;
+    }
+}

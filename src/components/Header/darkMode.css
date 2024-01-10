@@ -1,0 +1,57 @@
+.wishlist_icon_wrap{
+}
+  .checkbox {
+    opacity: 0;
+    position: absolute;
+  }
+  
+  .themeMode_btn {
+    width: 40px;
+    height: 20px;
+    background-color: var(--black-color);
+    display: flex;
+    border-radius:50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    transform: scale(1.5);
+    margin: 0px;
+  }
+  body[class="dark"] .themeMode_btn .ball{
+    transform: translateX(19px);
+  }
+  /* body[class="light"] .themeMode_btn .ball{
+    transform: translateX(-19px);
+  } */
+  .themeMode_btn svg{
+    color: var(--white-color);
+    font-size: 10px;
+    line-height: 10px;
+  }
+  .ball {
+    width: 16px;
+    height: 16px;
+    background-color: var(--white-color);
+    position: absolute;
+    top: 2px;
+    left: 3px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+  }
+  
+  /*  target the elemenent after the label*/
+  .themeMode_btn .ball{
+    /* transform: translateX(19px); */
+  }
+  .themeMode_btn.dark_btn .ball{
+    transform: translateX(19px);
+  }
+  
+  .fa-moon {
+    color: pink;
+  }
+  
+  .fa-sun {
+    color: yellow;
+  }

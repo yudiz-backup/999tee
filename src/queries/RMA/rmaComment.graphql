@@ -1,0 +1,18 @@
+mutation rmaComment(
+  $id:Int!,
+  $content:String,
+  $upload:[MpRmaUploadInput]!
+  ){
+  mpRMARequestConversation(
+    request_id: $id, content: $content, upload: $upload) {
+    author_name
+    content
+    created_at
+    files
+    is_customer_notified
+    is_visible_on_front
+    reply_id
+    request_id
+    type
+  }
+}

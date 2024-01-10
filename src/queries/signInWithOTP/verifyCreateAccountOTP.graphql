@@ -1,0 +1,14 @@
+query verifyCreateAccountOTP(
+    $mobileNumber: String
+    $otp: String
+    $websiteId: Int
+){
+  createAccountOTPVerify(
+      mobileNumber: $mobileNumber, 
+      otp: $otp, 
+      websiteId: $websiteId
+  ) {
+    message
+    status
+  }
+}

@@ -1,0 +1,7 @@
+query pincodeConfiguration{
+  pincodeConfiguration {
+    allowed_on_product_page
+    enabled
+    pincode_label
+  }
+}

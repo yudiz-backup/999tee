@@ -1,0 +1,77 @@
+.root {
+    align-items: center;
+    color: var(--black-color);
+    display: inline-flex;
+    gap: 0.75rem;
+    grid-auto-flow: column;
+    grid-template-areas: 'input label';
+    grid-template-columns: min-content 1fr;
+    margin: 0 !important;
+    justify-items: center;
+    line-height: 1.5rem;
+    position: relative;
+    margin-bottom: 0rem !important;
+}
+.group_checkbox{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.group_checkbox{
+
+}
+.input {
+    -webkit-appearance: none;
+    background: none;
+    background-clip: content-box;
+    border: 6px solid transparent;
+    border-radius: 50%;
+    grid-area: input;
+    height: 24px;
+    margin: 0;
+    width: 24px;
+    z-index: 2;
+    position: absolute;
+    left: 0% !important;
+    top: 0% !important;
+      
+}
+
+.icon {
+    grid-area: input;
+    z-index: 1;
+}
+
+.icon svg {
+    stroke: #b7b7b7;
+}
+
+.label {
+    font-size: var(--venia-typography-body-S-fontSize);
+    grid-area: label;
+    justify-self: start;
+}
+
+.input:checked:disabled {
+    background-color: var(--black-color) !important;
+}
+
+.input:checked {
+    background-color: var(--black-color);
+}
+
+.input:checked + .icon svg {
+    stroke: var(--black-color);
+}
+
+.input:active,
+.input:focus {
+    box-shadow: var(--primary-box-shadow);
+    outline: none;
+}
+
+/* rtl */
+body[class='rtl_view'] .input {
+    left: -4px;
+}

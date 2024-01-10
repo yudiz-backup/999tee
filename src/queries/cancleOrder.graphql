@@ -1,0 +1,7 @@
+mutation cancleOrder($id: String){
+  orderCancel(input: {
+    id: $id
+  }) {
+    message
+  }
+}

@@ -1,0 +1,6 @@
+mutation addItemToWishlist($product_id: Int!) {
+    addItemToWishlist(product_id: $product_id) {
+        success
+        message
+    }
+}

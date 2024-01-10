@@ -1,0 +1,20 @@
+mutation addProductsToCompareList($products: ID, $uid: ID!) {
+    addProductsToCompareList(input: { uid: $uid, products: [$products] }) {
+        uid
+        item_count
+        attributes {
+            code
+            label
+        }
+        items {
+            uid
+            product {
+                sku
+                name
+                description {
+                    html
+                }
+            }
+        }
+    }
+}

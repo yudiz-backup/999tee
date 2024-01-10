@@ -1,0 +1,55 @@
+query rmaReturnItmes($id:Int){
+  orderDetails(id: $id) {
+    billing_address
+    can_creditmemo
+    comment {
+      comment
+      create_at
+    }
+    created_at
+    creditmemo_subtotal
+    creditmemo_total
+    customer_name
+    discount_amount
+    discount_amount_for_refund
+    discount_description
+    grand_total
+    hasCreditmemos
+    hasInvoices
+    hasShipments
+    increment_id
+    invoice_id
+    items {
+      discount_amount
+      discount_amount_for_refund
+      id
+      name
+      options{
+          option_label
+          value_label
+        }
+      price
+      qty_ordered
+      qty_refund
+      qty_shipped
+      row_total
+      row_total_for_refund
+      sku
+      status
+      sub_total
+      tax_amount
+      tax_amount_for_refund
+      tax_percent
+    }
+    payment
+    pos
+    shipping
+    shipping_address
+    shipping_method
+    status
+    subtotal
+    tax
+    tax_for_refund
+    telephone
+  }
+}

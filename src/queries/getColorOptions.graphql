@@ -1,0 +1,9 @@
+query getColorOptions{
+  coloroptions{
+    data{
+      colorCode
+      colorLabel    
+      colorValueId
+    }
+  }
+}

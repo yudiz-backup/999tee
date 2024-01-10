@@ -1,0 +1,9 @@
+query getMoreInfoProducts($sku: String!) {
+    moreInfoProducts(sku: $sku) {
+        data {
+            label
+            value
+            attribute_code
+        }
+    }
+}

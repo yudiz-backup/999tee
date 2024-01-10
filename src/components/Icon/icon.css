@@ -1,0 +1,20 @@
+.root {
+    --stroke: var(--black-color);
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    touch-action: manipulation;
+}
+
+.icon {
+    /* fill: var(--black-color); */
+    stroke: var(--black-color);
+    stroke-width: 1.7;
+}
+
+@media (min-width: 641px) {
+    .icon_desktop {
+        width: 28px;
+        height: 28px;
+    }
+}

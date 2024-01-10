@@ -1,0 +1,3 @@
+mutation rmaCancleRequest($id:Int!) {
+  mpRMARequestCancel(request_id: $id)
+}

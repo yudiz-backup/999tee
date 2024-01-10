@@ -1,0 +1,15 @@
+.payment_processing{
+    min-height: calc(100vh - 100px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.payment_processing img{
+    max-width: 200px;
+}
+.payment_img_section{
+    text-align: center;
+}
+.payment_img_section h2{
+    font-family: var( --font-family);
+}

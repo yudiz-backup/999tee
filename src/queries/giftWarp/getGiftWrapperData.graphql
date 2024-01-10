@@ -1,0 +1,26 @@
+query getGiftWrapperData{
+mpGiftWrapWrappers(filter: {}, pageSize: 200, currentPage: 1) {
+items {
+amount
+category
+created_at
+description
+image
+name
+price_type
+sort_order
+status
+updated_at
+wrap_id
+}
+page_info {
+currentPage
+endPage
+hasNextPage
+hasPreviousPage
+pageSize
+startPage
+}
+total_count
+}
+}

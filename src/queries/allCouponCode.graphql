@@ -1,0 +1,11 @@
+  query getAllCouponCodes{
+  allcouponcodes {
+    data {
+      couponTitle
+      couponCode
+      couponDescription
+      couponFromDate
+      coupontoDate
+    }
+  }
+}

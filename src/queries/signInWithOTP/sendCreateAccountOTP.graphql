@@ -1,0 +1,12 @@
+mutation sendCreateAccountOTP(
+    $mobileNumber: String
+    $websiteId: Int
+){
+  createAccountOTP(
+      mobileNumber: $mobileNumber,
+      websiteId: $websiteId
+  ) {
+    message
+    status
+  }
+}

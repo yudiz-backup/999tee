@@ -1,0 +1,178 @@
+/*contact us page*/
+.contact_page_wrapper {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin: 0px 0px 100px !important;
+}
+.contact_banner  { width: 100%; object-fit: cover; aspect-ratio: 1 / 0.5; border-radius: 0px; max-height: calc(100vh - 122px); min-height: 800px; margin-bottom: 50px !important; }
+
+.contact_desc_wrapper { box-shadow: 0px 0px 2px rgba(0, 0,0, 0.2); border-radius: 12px; overflow: hidden; margin-top: 50px; }
+.contact_desc_wrapper .contact_right_desc { text-align: center; }
+.contact_form {
+    background-color: var(--white-color);
+    box-shadow: var(--primary-box-shadow);
+    /* padding: 15px; */
+}
+.contact_page_model  { height: 100%; }
+
+.contact_page_model img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position:  center right;
+}
+.contact_right_desc { padding: 20px; }
+.contact_page_form {
+    margin-top: 60px;
+}
+.contact_page_form form {
+    padding-bottom: 0;
+}
+.contact_page_form form [class='form-group row']:nth-child(3),
+.contact_page_form form [class='form-group row']:nth-child(4) {
+    margin-bottom: 0;
+}
+.contact_page_form [class="grecaptcha-badge"] { display: none !important; }
+.actions {
+    margin-top: 20px;
+}
+/* .conatct_page {
+}
+.heading_content {
+}
+.phone_mail_wrapp {
+}
+.icons {
+}
+.phone_number {
+} */
+/*contact us page*/
+.contact_page_wrapper {
+    padding-top: 40px;
+}
+/* .contact_page_wrapper .conatct_page {
+} */
+.contact_page_wrapper .content_page_heading {
+    font-size: 20px;
+   font-family: var(--font-family) !important; font-weight: var(--font_weight_m) !important;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.contact_page_wrapper .heading_content {
+    padding: 0px 30px 0px 0px;
+    line-height: 27px;
+    color: var(--black-color);
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+.phone_mail_wrapp {
+    padding-top: 25px;
+    letter-spacing: 1px;
+}
+.phone_mail_wrapp a {
+    display: block;
+    padding: 8px 0px;
+}
+.icons {
+    padding-right: 12px;
+}
+.icons svg {
+    color: var(--black-color);
+    font-size: 14px;
+    vertical-align: middle;
+}
+.phone_number,
+.email {
+    color: var(--black-color);
+    font-size: 15px;
+}
+.email:hover {
+    color: var(--ced-red-color);
+}
+.input_field {
+    margin-bottom: 10px;
+}
+.input_field textarea {
+    height: 110px;
+    resize: none;
+}
+.contact_page_wrapper .contact_form {
+    /* padding: 20px;
+    background: var(--white-color); */
+    box-shadow: none;
+}
+.contact_page_wrapper .contact_form input {
+    padding: 0px 10px;
+}
+/* .contact_page_wrapper .caontact_form_title {
+} */
+.contact_page_wrapper .error {
+    color: var(--error-color);
+}
+.contact_page_wrapper .success {
+    color: var(--success-color);
+}
+.contact_page_wrapper .actions {
+    text-align: center;
+}
+.contact_page_wrapper .actions button {
+    width: unset;
+    padding: 8px 20px;
+}
+/* .contact_page_wrapper .actions button {
+    background-color: transparent;
+    border: none;
+}
+.contact_page_wrapper .actions button span {
+    color: #111111;
+   font-family: var(--font-family) !important; font-weight: var(--font_weight_m) !important;
+} */
+
+@media (max-width: 1440px) {
+    .contact_page_wrapper {
+        padding-top: 20px;
+    }
+    .contact_page_wrapper { margin: 0px 0px 80px !important; }
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .contact_banner { min-height: 650px; }
+}
+
+@media (min-width: 768px) and (max-width:  991px) {
+    .contact_banner { min-height: 600px; }
+    .contact_page_wrapper { margin: 0px 0px 60px !important; }
+
+    .contact_page_model img { aspect-ratio: 1/0.5; }
+    .contact_right_desc  { padding: 25px; }
+}
+
+@media (max-width: 767px) {
+    .contact_banner { min-height: 450px; }
+    .contact_page_wrapper { margin: 0px 0px 60px !important; }
+    .contact_right_desc  { padding: 20px; }
+}
+
+@media screen and (min-width: 220px) and (max-width: 767px) {
+    .contact_page_wrapper .contact_form {
+        padding: 15px;
+    }
+    .contact_page_wrapper {
+        padding-top: 30px;
+    }
+    .conatct_page {
+        margin-top: 20px;
+    }
+    /* contact us page */
+    .contact_page_wrapper .actions button {
+        padding: 10px 41px;
+    }
+    .contact_page_wrapper .conatct_page {
+        margin-top: 25px;
+    }
+    .contact_page_wrapper .heading_content {
+        padding: 0px 0px 0px 0px;
+    }
+}

@@ -1,0 +1,50 @@
+query getRewardPointConfig{
+  customer {
+    email
+    firstname
+    lastname
+    middlename
+    mobilenumber
+    mp_reward {
+      balance_limitation
+      current_exchange_rates{
+        spending_rate
+        earning_rate
+        spend_points
+        spend_rate_price
+      }
+      transactions(filter: {}, pageSize: 300, currentPage: 1){
+      total_count
+      items{
+        transaction_id
+        action_code
+        action_type
+        comment
+        created_at
+        customer_id
+        expiration_date
+        expire_email_sent
+        order_id
+        point_amount
+        point_remaining
+        point_used
+        reward_id
+        status
+        store_id
+        transaction_id
+      }
+      
+      }
+      customer_id
+      earn_point_expire
+	  notification_expire
+	  notification_update
+	  point_balance
+	  point_earned
+	  point_spent
+	  refer_code
+	  reward_id
+
+	}
+  }
+}

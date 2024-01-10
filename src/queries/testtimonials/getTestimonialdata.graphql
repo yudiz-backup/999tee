@@ -1,0 +1,9 @@
+query getTestimonialdata{
+  getTestimonialdata {
+    data {
+      auther
+      id
+      text
+    }
+  }
+}

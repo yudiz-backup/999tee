@@ -1,0 +1,64 @@
+.root {
+    display: grid;
+    gap: 0.9375rem 1.5rem;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    padding: 16px;
+    padding-top: 0px;
+}
+
+.field {
+    grid-column-end: span 2;
+}
+
+.formMessage,
+.email,
+.country,
+.street0,
+.street1,
+.city,
+.region,
+.postcode,
+.telephone {
+    composes: field;
+}
+
+.defaultShipping {
+    composes: field;
+}
+.defaultShipping [class='checkbox-root-2Ji'] label {
+    margin-bottom: 0;
+}
+.defaultShipping [class='checkbox-root-2Ji'] {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+.defaultShipping
+    [class='checkbox-root-2Ji']
+    :is([class='checkbox-checkboxItem-2jm'], [class='checkbox-input-266']) {
+    display: none;
+}
+.firstname,
+.lastname {
+    grid-column-end: span 1;
+}
+
+.buttons {
+    composes: field;
+    display: grid;
+    gap: 1rem;
+    grid-auto-flow: column;
+    justify-self: center;
+    padding: 0rem;
+}
+
+@media (max-width: 960px) {
+    .firstname {
+        grid-column: 1 / span 2;
+    }
+
+    .lastname {
+        grid-column: 1 / span 2;
+    }
+}

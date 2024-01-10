@@ -1,0 +1,20 @@
+.root {
+    display: grid;
+    gap: 0.75rem;
+    padding-top: 0.75rem;
+    text-align: left;
+}
+.root strong {
+    font-family: var(--font-family); font-weight: var(--font_weight_l);
+}
+.root:empty {
+    display: none;
+}
+.root a,
+.root a:hover {
+    color: var(--black-color);
+    display: block;
+}
+.root a p {
+    margin-bottom: 0;
+}

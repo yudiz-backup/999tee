@@ -1,0 +1,18 @@
+mutation submitProductReview(
+    $nickname: String!
+    $title: String!
+    $detail: String!
+    $ratings: String!
+    $product_id: Int!
+) {
+    submitProductReview(
+        nickname: $nickname
+        title: $title
+        detail: $detail
+        ratings: $ratings
+        product_id: $product_id
+    ) {
+        success
+        message
+    }
+}

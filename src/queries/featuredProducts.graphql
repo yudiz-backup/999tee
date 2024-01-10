@@ -1,0 +1,45 @@
+query featuredProducts($categoryId: Int!) {
+    featuredProducts(categoryId: $categoryId) {
+        data {
+            id
+            name
+            price
+            final_price
+            sku
+            image
+            description
+            urlkey
+            type
+            price_range {
+                minimum_price {
+                    regular_price {
+                        value
+                        currency
+                    }
+                    final_price {
+                        value
+                        currency
+                    }
+                    discount {
+                        amount_off
+                        percent_off
+                    }
+                }
+                maximum_price {
+                    regular_price {
+                        value
+                        currency
+                    }
+                    final_price {
+                        value
+                        currency
+                    }
+                    discount {
+                        amount_off
+                        percent_off
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,108 @@
+.root {
+    padding: 15px;
+}
+
+.errorText {
+    color: var(--error-color);
+    line-height: var(--venia-global-lineHeight-300);
+}
+
+.lineItems {
+    display: grid;
+    grid-gap: 0.75rem;
+    grid-template-columns: 1fr auto;
+    line-height: 1.5rem;
+}
+
+.lineItemLabel {
+    justify-self: start;
+    letter-spacing: 1px;
+    font-size: 13px;
+    display: flex;
+}
+
+.price {
+    justify-self: end;
+    letter-spacing: 1px;
+    font-size: 13px;
+
+}
+
+.totalLabel {
+    composes: lineItemLabel;
+    font-family: var(--font-family) !important; font-weight: var(--font_weight_l) !important;
+    display: block;
+    color: var(--ced-black-color);
+    font-size: 15px;
+    margin-top: 5px;
+    letter-spacing: 1px;
+   font-family: var(--font-family) !important; font-weight: var(--font_weight_m) !important;
+}
+
+.totalPrice {
+    composes: price;
+    margin-top: 5px;
+}
+.totalPrice span {
+    font-family: var(--font-family) !important; font-weight: var(--font_weight_l) !important;
+    display: inline-block;
+    color: var(--ced-black-color);
+    font-size: 15px;
+    letter-spacing: 1px;
+   font-family: var(--font-family) !important; font-weight: var(--font_weight_m) !important;
+
+}
+.priceUpdating {
+    composes: price;
+    opacity: 0;
+}
+
+.checkoutButton_container {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    margin-top: 2rem;
+    width: 100%;
+}
+.checkoutButton_container button {
+    width: 100%;
+}
+
+.gst_tax_summary_icon_wrapper {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.gst_tax_summary_icon_wrapper span {
+    margin-top: -5px;
+}
+
+.gst_tax_summary_icon_wrapper svg {
+    position: relative;
+    top: 5px;
+    stroke-width: 1px;
+    stroke: var(--text-color) !important;
+    stroke-width: 1 !important;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .checkoutButton_container {
+        width: 100%;
+        text-align: center;
+    }
+    .checkoutButton_container button {
+        max-width: 300px;
+        min-width: 300px;
+    }
+}
+@media screen and (min-width: 220px) and (max-width: 767px) {
+    .root {
+        padding: 0px;
+    }
+    .totalLabel {
+        font-family: var(--font-family) !important; font-weight: var(--font_weight_l) !important;
+        display: block;
+        color: var(--ced-black-color);
+        font-size: 18px;
+    }
+}

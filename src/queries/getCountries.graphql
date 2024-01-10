@@ -1,0 +1,12 @@
+query getCountries {
+    countries {
+        id
+        full_name_english
+        full_name_locale
+        available_regions {
+            id
+            code
+            name
+        }
+    }
+}

@@ -1,0 +1,11 @@
+query getProductRatings {
+    getProductRatings {
+        data {
+            rating_id
+            rating_code
+            options
+        }
+        enable_review
+        allow_guest_customer_to_write_review
+    }
+}

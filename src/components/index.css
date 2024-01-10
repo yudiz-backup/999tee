@@ -1,0 +1,219 @@
+/* @import './tokens.css'; */
+@font-face {
+    font-family: "Montserrat-Light";
+    src: url("/cenia-static/fonts/Montserrat-Light.ttf");
+    font-display:swap;
+}
+@font-face {
+    font-family: "Montserrat-Regular";
+    src: url("/cenia-static/fonts/Montserrat-Regular.ttf");
+    font-display:swap;
+}
+@font-face {
+    font-family: "Montserrat-Medium";
+    src: url("/cenia-static/fonts/Montserrat-Medium.ttf");
+    font-display:swap;
+}
+@font-face {
+    font-family: "Montserrat-SemiBold";
+    src: url("/cenia-static/fonts/Montserrat-SemiBold.ttf");
+    font-display:swap;
+}
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&display=swap');
+:root{
+    /* font family */
+    /* --montserrat_l:"Montserrat-Light";
+    --montserrat_r:"Montserrat-Regular";
+    --montserrat_m:"Montserrat-Medium";
+    --montserrat_s:"Montserrat-SemiBold"; */
+    --font-family: 'Assistant', sans-serif;
+    --font_weight_l: 300;
+    --font_weight_r: 400;
+    --font_weight_m: 500;
+    --font_weight_s: 600;
+    --font_weight_b: 700;
+
+   
+    /* theme box shadow */
+    
+    --theme-shadow:0px 0px 15px rgba(10, 10, 10, 0.29);
+}
+/* body h1,h2,h3,h4,h5,h6, span, li, a, div, input{
+    font-family: 'Montserrat', sans-serif !important;
+
+} */
+:global(*) {box-sizing: border-box;}
+:global(html) {
+    background-color: rgb(var(--venia-global-color-gray-50));
+    font-size: 100%;
+    line-height: var(--venia-global-lineHeight-100);
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+ * Lock the window's scroll position while an overlay is active.
+ * Has no effect in iOS Safari.
+ * https://bugs.webkit.org/show_bug.cgi?id=153852
+ *
+ * :global(html[data-scroll-lock='true'] body) {
+ *   overflow: hidden ;
+ * }
+ */
+:global(body),:global(button),:global(input),:global(select),:global(textarea) {color: rgb(var(--venia-global-color-text));}
+:global(body) {background-color: rgb(var(--venia-global-color-gray-50));margin: 0;padding: 0;}
+:global(h1),:global(h2),:global(h3),:global(h4),:global(h5),:global(h6) {font-family:var(--font-family); font-weight: var(--font_weight_l);margin: 0;}
+:global(h1) {font-size: var(--venia-global-fontSize-600);}
+:global(h2) {font-size: var(--venia-global-fontSize-400);}
+:global(a) {color: currentColor;text-decoration: none;}
+:global(p) {margin: 0;}
+:global(dl),:global(ol),:global(ul) {list-style-type: none;margin: 0;padding: 0;}
+:global(dd),:global(dt) {margin: 0;}
+:global(button) {background: none;border: 0;cursor: pointer;font-size: 100%;padding: 0;touch-action: manipulation;user-select: none;-webkit-appearance: none;letter-spacing: 1px;}
+:global(button:disabled) {cursor: default;touch-action: none;}
+/* div, section, form, header{transition: all 0.011s;} */
+:root {
+
+    /* --ced-max-width: 1440px; */
+    
+    --primary-box-shadow: 0px 0px 7px 0px rgb(179 179 179 / 20%);
+    --dark-box-shadow: 0px 0px 7px 0px rgba(123, 123, 123, 0.233);
+    
+}
+/* div[class*='container'] {
+    max-width: 1280px;
+} */
+body{background: var(--white-color); font-family: 'Assistant', sans-serif !important;}
+:root{
+ /* theme colors */
+ --border-color: #eaeaea;
+ --theme-color:#0566ff;
+ --theme-bg-color: #fcfcfc;
+ --theme-text-color:#F50344;
+ --theme-light-color:#0566ff14;
+ --black-color: #000000;
+ --black-light-color:rgba(0,0,0, 0.5);
+ --white-color:#ffffff;
+ --white-color100:#f4f4f4;
+ --white-color200: #f6f6f6;
+ --text-color: #000;
+ --secondary-color:#464546;
+ --grey-color: #878687;
+ --error-color: #e40606;
+ --base-color: #dc2b2b;
+ --border-color: #e4e4e4;
+ --success-color: #018001;
+ --rating-star-color: #ffbf00;
+ --secondary-dark-color: #545d63;
+ --secondary-mobile-newsletter-color: #f8efeb;
+ --button-hover-color:#2e2e2e;
+}
+
+
+body[class="dark"]{
+    /* theme colors */
+       
+    --theme-color:#0566ff;
+    --theme-bg-color: #181818;
+    --theme-text-color:#F50344;
+    --theme-light-color:#d3d3d314;
+    --black-color: #ffffff;
+    --black-light-color:#ffffff80;
+    --white-color:#000000;
+    --white-color100:#282828;
+    --white-color200: #171717;
+    --text-color: #ffffff;
+    --secondary-color:#dddddd;
+    --grey-color: #878687;
+    --error-color: #e40606;
+    --base-color: #dc2b2b;
+    --border-color: #e4e4e4;
+    --success-color: #018001;
+ --rating-star-color: #ffbf00;
+ --secondary-dark-color: #9daeb8;
+ --secondary-mobile-newsletter-color: #030303;
+ --button-hover-color:#e1e1e1;
+ --primary-box-shadow: 0px 0px 7px 0px rgba(255, 255, 255, 0.335);
+   }
+button{font-family: var(--font-family) !important; font-weight: var(--font_weight_m) !important;}
+body,html,input,select,textarea,span,p,a,div,li,div {font-size: 14px;color: var(--text-color);font-family: var(--font-family); font-weight: var(--font_weight_l);}
+a,a:hover {text-decoration: unset !important;}
+button:focus {outline: unset !important;}
+body {overflow-x: hidden;}
+::selection{background-color: var(--black-color);color: var(--white-color);}
+
+html[data-scroll-lock='true'],
+html[data-scroll-lock='true'] body {height: 100%;overflow: hidden;position: fixed;width: 100%;}
+span[aria-hidden='true'],
+label[aria-hidden='true'] {visibility: hidden;position: absolute;left: 0;}
+
+/* full screen header issue */
+body[class='static_header_bottomtool'],body[class='static_header_bottomtool'] div[class='main-bottom_toolbar-2Rc'] {position: unset;}
+input[disabled=''] {cursor: not-allowed;color: #b9b9b9;}
+
+/* rtl */
+body[class='rtl_view'] {direction: rtl;text-align: right;}
+.home-noo_details_wrapper-3m1 a { text-transform: uppercase !important;}
+body div[class="resetPassword-root-2SK"]{
+    
+}
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 50000s ease-in-out 0s, color 5000s ease-in-out 0s;
+}
+
+.pswp--click-to-zoom.pswp--zoom-allowed .pswp__img{background: transparent;}
+
+
+
+/* Responsive start here  */
+@media only screen and (min-width: 1400px) and (max-width: 1599px)
+{
+
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px)
+{
+
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px)
+{
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px)
+{
+
+}
+
+ @media only screen and (min-width: 576px) and (max-width: 767px)
+{
+
+}
+
+@media only screen  and (max-width: 575px)
+{
+    
+}
+
+:global(.grecaptcha-badge) {
+    bottom: 10px;
+    z-index: 999;
+    right: -186px;
+    visibility: visible !important;  
+    box-shadow: grey 0px 0px 5px;
+    border-radius: 2px;
+     transition: right 0.3s ease 0s;
+}
+
+:global(.grecaptcha-badge:hover) {
+    right: 0;
+}
+
+@media (max-width: 767px) {
+    :global(.grecaptcha-badge) {bottom: 65px;}
+}

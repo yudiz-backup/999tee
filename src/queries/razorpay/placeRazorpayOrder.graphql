@@ -1,0 +1,13 @@
+mutation placeRazorpayOrder($order_id: String!, $referrer: String!){
+  placeRazorpayOrder (
+      order_id: $order_id
+      referrer: $referrer
+  ){
+    success
+    rzp_order_id
+    order_id
+    amount
+    currency
+    message
+  }
+}

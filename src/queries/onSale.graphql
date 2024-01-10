@@ -1,0 +1,37 @@
+query {
+  onsale {
+    data {
+      child{
+        childId
+        childImage
+        childName
+        childSku
+        childPrice
+        childStockStatus
+        configurable_options{
+          Attribute_id
+          Attribute_code
+          attribute_options{
+            label
+            value
+            code
+          }
+        }
+      }
+      stock_status_data {
+        qty
+        stock_status
+      }
+      description
+      final_price
+      id
+      image
+      name
+      regularPrice
+      sku
+      specialPrice
+      type
+      urlkey
+    }
+  }
+}

@@ -1,0 +1,53 @@
+query getInvoiceDetails($order_id: Int!) {
+    invoiceDetails(order_id: $order_id) {
+        billing_address
+    can_creditmemo
+    cgst_amount
+    creditmemo_subtotal
+    creditmemo_total
+    discount_amount
+    discount_amount_for_refund
+    discount_description
+    grand_total
+    hasCreditmemos
+    hasInvoices
+    hasShipments
+    invoices {
+      invoice_date
+      invoice_number
+      item{
+       options{
+        option_label
+        value_label
+      }
+        price
+        product_name
+        qty_invoiced
+        sku
+        subtotal
+        tax_amount
+        tax_percent
+      }
+      subtotal
+      tax
+    }
+    mp_extra_fee
+    order_date
+    order_number
+    order_status
+    payment
+    sgst_amount
+    shipping
+    shipping_address
+    shipping_cgst_amount
+    shipping_method
+    shipping_sgst_amount
+    subtotal
+    tax
+    tax_for_refund
+    applied_store_credit
+    gift_wrap
+    igst_amount
+    shipping_igst_amount
+    }
+}

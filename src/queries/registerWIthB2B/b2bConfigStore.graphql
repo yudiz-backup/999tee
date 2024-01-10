@@ -1,0 +1,8 @@
+query b2bConfigStore{
+bssB2bRegistrationStoreConfig(store_view: 1) {
+    enable
+    shortcut_link_text
+    title
+    display_minimum_qty
+}
+}

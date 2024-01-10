@@ -1,0 +1,238 @@
+.rewardPoint_page {
+    position: relative;
+    composes: mobile_m_bottom from '../../components/variables.css';
+}
+
+.rewardPoint_item {
+    box-shadow: var(--primary-box-shadow);
+    padding: 15px 20px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.add_rma_form_footer,
+.rma_items_status,
+.rma_title_wrapper {
+    composes: flexSpace from '../../components/variables.css';
+
+}
+.rma_recent{}
+.success_msg {
+    color: var(--success-color);
+    letter-spacing: 1px;
+}
+
+.add_rma_form_footer{
+    margin: 10px 0px;
+}
+.add_rma_form_footer label{
+    border: 1px solid var(--black-color);
+    display: inline-block;
+    padding: 6px 25px;
+    cursor: pointer;
+    margin: 0 !important;
+color:    var(--black-color)}
+.add_rma_form_footer input[type="file"] {
+    display: none;
+}
+.rma_items_status {
+    margin: 20px 0 10px;
+}
+
+.rma_items_status [class="field-root-2gS"] {
+    display: flex;
+    align-items: center;
+}
+
+.rma_items_status [class="field-root-2gS"] :where(span, label) {
+    font-size: 14px;
+}
+
+.rma_title_wrapper {
+    margin-bottom: 0;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.rma_items_status [class="field-root-2gS"] select {
+    background-color: var(--white-color);
+    border: 1px solid var(--border-color) !important;
+    color: var(--black-color);
+    margin-inline: 5px;
+}
+
+.rma_title_wrapper a {
+    color: var(--white-color);
+    font-family: var(--font-family); font-weight: var(--font_weight_m);
+}
+
+.rewardPoint_item span {
+   font-family: var(--font-family) !important; font-weight: var(--font_weight_m) !important;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
+.rewardPoint_page h6 {
+    font-family: var(--font-family); font-weight: var(--font_weight_r);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.rewardPoint_address {
+    margin-top: 20px;
+}
+
+:is(.rewardPoint_address, .rewardPoint_email, .table_section) [class='homepage_sections_head'] {
+    margin-left: 0;
+}
+
+:is(.rewardPoint_address, .rewardPoint_email, .table_section) [class='homepage_section_heading'] {
+    font-size: 18px !important;
+    font-family: var(--font-family); font-weight: var(--font_weight_r);
+}
+
+.rewardPoint_address [class='card-header'] {
+    background-color: var(--black-color);
+   font-family: var(--font-family) !important; font-weight: var(--font_weight_m) !important;
+    text-transform: capitalize;
+    color: var(--white-color);
+}
+
+.rewardPoint_address [class='card-body'] {
+    background-color: transparent;
+   font-family: var(--font-family) !important; font-weight: var(--font_weight_m) !important;
+    text-transform: capitalize;
+}
+
+.rewardPoint_address [class='card-body'] span {
+    font-family: var(--font-family) !important; font-weight: var(--font_weight_s) !important;
+    margin-inline: 5px;
+}
+
+.rewardPoint_email label {
+    margin-bottom: 0px;
+}
+
+.rewardPoint_email label span {
+    font-family: var(--font-family); font-weight: var(--font_weight_r);
+}
+
+.subscribe {
+    margin-left: -5px;
+}
+
+.subscribe label {
+    justify-items: flex-start;
+}
+
+.subscribe span[class='checkbox-icon-1CV'] svg {
+    stroke: var(--black-color);
+    vertical-align: bottom;
+}
+
+.subscribe span[class='checkbox-icon-1CV'] {
+    text-align: center;
+}
+
+.subscribe [class='checkbox-checkboxItem-2jm'] a {
+    color: var(--black-color);
+}
+
+.subscribe [class='checkbox-root-2Ji']>label {
+    margin-bottom: 0;
+}
+
+.table_section [class="homepage_sections_head"] {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (max-width: 991px) {
+    .rewardPoint_page [class='col-lg-4 col-sm-6 '] {
+        margin-bottom: 20px;
+    }
+
+    .rewardPoint_page [class='col-lg-4 col-sm-6 ']:last-child {
+        margin-bottom: 0;
+    }
+
+    :is(.rewardPoint_address, .rewardPoint_email, .table_section) {
+        margin-top: 20px;
+    }
+
+    :is(.rewardPoint_address, .rewardPoint_email, .table_section) [class='homepage_section_heading'] {
+        padding-left: 0;
+    }
+}
+
+
+
+.rma_modal [class="modal-content"]{
+    box-shadow:  var(--primary-box-shadow);
+    padding:25px;
+    border: none;
+}
+.rma_modal [class="close"]{
+    position: relative;
+    padding: 0;
+    display: grid;
+    place-items: center;
+    opacity: 1;
+    width: 27px;
+    height: 26px
+}
+.rma_modal [class="close"] span{
+    font-size: 30px;
+    visibility: visible;
+    color: var(--black-color);
+    }
+.rma_modal :where([class="modal-header"],[class="modal-footer"]){
+    border: none !important;
+    padding-inline: 0;
+}
+
+.rma_modal [class="modal-header"]{
+    padding-top:0
+}
+.rma_modal [class="modal-footer"]{
+    padding-bottom:0
+}
+
+.rma_modal{
+    background-color: #00000061;
+    z-index: 99999999;
+}
+
+.ramtable_page [class="myAccount-orders_row-20v"] li{
+    padding: 0;
+}
+.ramtable_page [class="myAccount-table_wrapper_head-1BV"] li:last-child{
+    flex: 0 0 9%;
+ }
+
+ @media screen and (max-width: 991px) {
+    .ramtable_page [class="myAccount-orders_row-20v"] li:last-child a{
+        margin-left: auto;
+    }
+ }
+ @media screen and (max-width: 767px){
+    .job_tabe{
+        gap: 10px;
+        white-space: nowrap;
+        flex-wrap: nowrap;
+        overflow: scroll;
+        overflow-y: hidden;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        margin-top: 10px;
+        flex-direction: row !important;
+        display: flex;
+
+    }
+    .job_tabe li{
+    }
+    .job_tabe li button{border-radius: 20px !important; border-radius: 20px !important;  }
+ }

@@ -1,0 +1,17 @@
+query avialableJobs($categoryName : String!) {
+  jobs(categoryName: $categoryName) {
+    salary
+    salary_type
+    description
+    designation
+    experience
+    eligibility
+    entity_id
+    location
+    skills
+    sort
+    status
+    created_at
+    updated_at
+  }
+}

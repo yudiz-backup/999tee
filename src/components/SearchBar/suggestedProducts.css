@@ -1,0 +1,23 @@
+.products {
+    border-top: 1px solid rgb(var(--venia-global-color-border));
+    display: grid;
+    gap: 0.75rem;
+    padding-top: 0.75rem;
+}
+
+.item{
+    text-align: center;
+}
+
+.products:empty {
+    display: none;
+}
+.root {
+}
+.root li {
+    margin: 0 0 10px 0;
+    border-bottom: 1px dashed var(--border-color);
+    padding-bottom: 10px;
+}
+.item {
+}

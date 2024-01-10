@@ -1,0 +1,271 @@
+.overlay,
+.modal_Wrap {
+}
+.overlay {
+}
+.signedin_menu {
+    position: absolute;
+    z-index: 1;
+    top: 50px;
+    right: 0px;
+    min-width: 210px;
+    letter-spacing: 1px;
+}
+.account_modal {
+    box-shadow: var(--primary-box-shadow);
+    background: var(--white-color);
+    position: relative;
+}
+body [class='modal-backdrop fade show'] {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.stork_alert {
+    background-color: #00000082;
+    padding-right: 0 !important;
+    z-index: 999;
+}
+.notify_btn_input_box{ 
+    display: flex;
+    align-items: flex-start;
+    -webkit-align-items: flex-start;
+    justify-content: center;
+}
+.notify_btn_input_box > div{
+    width: 100%;
+}
+.notify_btn_input_box button{
+    border-radius: 0px 3px 3px 0px;
+}
+.notify_btn_input_box button span{
+    line-height: 35px;
+}
+.notify_btn_input_box input{
+min-height: 35px;
+line-height: 35px;
+padding-right: 8px !important;
+}
+.notify_btn_input_box input:focus{
+    box-shadow: none;
+}
+.stork_alert [class='modal-dialog'] {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    width: 100%;
+    margin: 0 auto;
+}
+.stork_alert [class='modal-dialog'] {
+    max-width: 600px;
+}
+.stork_alert
+    [class='modal-dialog']
+    :is([class='modal-header'], [class='modal-footer']) {
+    border: none !important;
+    padding: 0;
+}
+.stork_alert
+    [class='modal-dialog']  [class='modal-body']{padding-inline: 0;}
+.stork_alert
+    [class='modal-dialog'] [class='modal-footer'] [class="form-group"]{margin:0;    padding-top: 10px;
+    }
+.stork_alert [class='modal-body'] p:not(.text-danger) {
+    padding-bottom: 14px;
+}
+.stork_alert [class='modal-title'] {
+    font-family: var(--font-family); font-weight: var(--font_weight_m);
+    }
+.stork_alert
+    [class='modal-dialog'] [class='modal-footer'] p{
+font-size: 12px;
+line-height: 18px;
+margin: 0px;
+    }
+.stork_alert .form_input {
+    background: var(--white-color);
+    border: 1px solid var(--border-color);
+    border-radius: 3px;
+    color: var(--black-color);
+    font-size: 13px;
+    margin: 0;
+    letter-spacing: 1px;
+}
+.stork_alert [class='form-group mb-0'] button {
+    display: block;
+    width: 100%;
+}
+.stork_alert [class='close'] {
+    padding: 0;
+    background-color: transparent !important;
+    border: none !important;
+    opacity: 1;
+}
+
+.stork_alert [class='close'] span {
+    display: block;
+    position: inherit;
+    visibility: visible;
+    font-size: 30px;
+    color: var(--black-color);
+}
+
+.stork_alert button {
+    border: 1px solid var(--black-color);
+    position: relative;
+    background-color: var(--black-color);
+   font-family: var(--font-family) !important; font-weight: var(--font_weight_m) !important;
+    transition: all 0.3s ease;
+}
+.stork_alert button:hover {
+    background-color: var(--button-hover-color);
+}
+.stork_alert[class='modal-dialog'] [class='modal-body']{
+    padding-top: 0;
+}
+.stork_alert [class='modal-dialog'] {
+max-width: 400px;
+text-align: center;
+}
+.stork_alert [class='modal-dialog'] [class='modal-content'] {
+    padding: 26px;
+    position: relative;
+}
+.stork_alert [class='modal-footer'] p {
+margin-bottom: 0;
+}
+.stork_alert [class='modal-footer'] button {
+    margin: 0;
+}
+.stork_alert [class='modal-dialog'] [class='modal-header'] button{
+
+}
+.close_madal_btn{
+    position: absolute;
+top: 14px;
+right: 20px;    
+}
+
+.login_img{
+    height: 100%; position: relative; width: 100%;
+    /* background-image: url('/cenia-static/images/Signup-banner.png');
+    background-position: left top;
+    background-size: auto 100vh;
+    background-repeat: no-repeat; */
+}
+.login_img img{
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    object-fit: cover;
+}
+.min_h_100 { min-height: calc(100vh - 122px); }
+.min_h_100 [class="col-md-6 d-flex align-items-center"]:last-child > div { width: 100%; }
+@media (max-width: 680px) {
+    .stork_alert [class='modal-dialog'] {
+        width: 90%;
+    }
+    .stork_alert [class='modal-dialog'] [class='modal-header'] h5 {
+        font-size: 22px;
+    }
+}
+.root {
+    opacity: 0;
+    visibility: hidden;
+    z-index: 9999999;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: auto;
+    height: 100%;
+    width: 100%;
+    transition: all 0.5s ease;
+}
+
+.root_open {
+    composes: root;
+    opacity: 1;
+    visibility: visible;
+}
+
+.account_modal_form {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999999999;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    composes: Transition from '../variables.css';
+    background: unset;
+}
+.account_modal_form::before {
+    display: none;
+}
+
+.modal_Wrap {
+    overflow: auto;
+    z-index: 99;
+}
+.modal_inner {
+    background-color: var(--white-color);
+    box-shadow: var(--primary-box-shadow);
+    width: 430px;
+    position: absolute;
+    z-index: 999999;
+    left: 50%;
+    margin-left: -215px;
+    margin-top: 2%;
+}
+.createAccount {
+    composes: root from '../SignIn/signIn.css';
+    padding: 0;
+}
+
+.forgotPassword {
+    padding: 2rem;
+}
+
+.loading {
+    padding: 2rem;
+}
+
+@media screen and (min-width: 220px) and (max-width: 767px) {
+    .stork_alert [class='modal-dialog'] [class='modal-content'] {
+        padding: 10px;
+        position: relative;
+    }
+    .account_modal {
+        display: none;
+    }
+    .modal_inner {
+        overflow: auto;
+        height: 100%;
+        bottom: -30px;
+        margin: 0;
+        left: 0;
+        /* transition: 0.3s all;
+        -moz-transition: 0.3s all;
+        -webkit-transition: 0.3s all; */
+        composes: Transition from '../variables.css';
+        width: 100%;
+    }
+    .root_open .modal_inner {
+        bottom: 0;
+    }
+  
+}
+
+@media screen and (max-width: 1024px) {
+}
+@media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 767px) {
+    .login_img { padding-top: 56%; }
+    .login_img img{
+        position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+        object-fit: cover; object-position: top center;
+    }
+    .min_h_100 { min-height: unset; }
+
+}

@@ -1,0 +1,63 @@
+mutation registerWithB2B(
+    $email: String
+    $firstname: String
+    $lastname: String
+    $password: String
+    $mobilenumber: String
+    $date_of_birth: String
+    $gender: Int
+    $is_subscribed: Boolean
+    $terms_conditions: Boolean
+    $assistance_allowed: Int
+    $cin_number: String
+    $gst_number: String
+    $company:String
+    $city:String
+    $street:[String]
+    $country_code:CountryCodeEnum
+    $region_code:String
+    $region:String
+    $region_id:Int
+    $bfirstname: String
+    $blastname: String
+    $default_billing:Boolean
+    $default_shipping:Boolean
+    $postcode:String
+    $telephone:String
+) 
+{
+bssB2bCustomerRegistration(input: {
+firstname: $firstname
+lastname: $lastname
+email: $email
+password: $password
+is_subscribed: $is_subscribed
+terms_conditions:$terms_conditions
+gender:$gender
+cin_number:$cin_number
+assistance_allowed:$assistance_allowed
+date_of_birth:$date_of_birth
+gst_number:$gst_number
+mobilenumber:$mobilenumber
+b2b_registration_address:{
+      default_billing:$default_billing
+      default_shipping:$default_shipping
+      company:$company
+      city:$city
+      country_code:$country_code
+      street:$street
+      firstname:$bfirstname
+      lastname:$blastname
+      postcode: $postcode
+      telephone: $telephone
+      region:{
+        region_code:$region_code
+        region:$region
+        region_id:$region_id
+      }
+    }
+}) {
+message
+status
+}
+}

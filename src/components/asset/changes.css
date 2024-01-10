@@ -1,0 +1,28 @@
+
+.feature_slider button span[aria-label="Next"],
+.feature_slider button span[aria-label="Previous"] {
+    background-color: var(--white-color);
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    line-height: 27px;
+    color: var(--black-color);
+    transition: 0.3s all;
+   font-family: var(--font-family) !important; font-weight: var(--font_weight_m) !important;
+}
+
+.feature_slider button:hover span {
+    background-color: var(--black-color);
+    color: var(--white-color);
+}
+
+.feature_slider button span[aria-label="Next"] {
+    right: -0px;
+}
+/* .feature_slider [class='home-noo_product_image-2qF'] a { height: unset; } */
+
+.feature_slider button span[aria-label="Previous"] {
+    left: -0px;
+}
+

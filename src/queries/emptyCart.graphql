@@ -1,0 +1,7 @@
+mutation emptyCart($cartId: String!) {
+    emptyCartAllItems(input: {
+    id:$cartId
+        }) {
+            success_message
+        }
+}

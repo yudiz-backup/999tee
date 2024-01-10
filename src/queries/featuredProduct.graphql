@@ -1,0 +1,10 @@
+query getFeaturedProductdata{
+getFeaturedProductdata {
+data {
+id
+image
+link
+title
+}
+}
+}

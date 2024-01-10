@@ -1,0 +1,182 @@
+query productSearch(
+    $currentPage: Int = 1
+    $inputText: String!
+    $pageSize: Int = 6
+    $filters: ProductAttributeFilterInput!
+    $sort: ProductAttributeSortInput
+) {
+    products(
+        currentPage: $currentPage
+        pageSize: $pageSize
+        search: $inputText
+        filter: $filters
+        sort: $sort
+    ) {
+        items {
+            id
+            name
+            small_image {
+                url
+            }
+            url_key
+            sku
+            type_id
+            stock_status
+            stock_status_data {
+                    qty
+                    low_stock_qty
+                    stock_status
+                }
+            url_suffix
+            ... on CustomizableProductInterface {
+                options {
+                    title
+                    required
+                    sort_order
+                    option_id
+                    ... on CustomizableDropDownOption {
+                        value {
+                            option_type_id
+                            sku
+                            price
+                            price_type
+                            sort_order
+                            title
+                            uid
+                        }
+                    }
+
+                    ... on CustomizableRadioOption {
+                        value {
+                            option_type_id
+                            price_type
+                            price
+                            sku
+                            sort_order
+                            title
+                            uid
+                        }
+                    }
+                    ... on CustomizableCheckboxOption {
+                        value {
+                            option_type_id
+                            price_type
+                            price
+                            sku
+                            sort_order
+                            title
+                            uid
+                        }
+                    }
+                    ... on CustomizableMultipleOption {
+                        value {
+                            option_type_id
+                            price_type
+                            price
+                            sku
+                            sort_order
+                            title
+                            uid
+                        }
+                    }
+
+                    ... on CustomizableAreaOption {
+                        areaValue: value {
+                            max_characters
+                            price_type
+                            price
+                            uid
+                        }
+                    }
+
+                    ... on CustomizableFieldOption {
+                        textValue: value {
+                            max_characters
+                            price_type
+                            price
+                            uid
+                        }
+                    }
+                }
+            }
+            price_range {
+                minimum_price {
+                    regular_price {
+                        value
+                        currency
+                    }
+                    final_price {
+                        value
+                        currency
+                    }
+                    discount {
+                        amount_off
+                        percent_off
+                    }
+                }
+                maximum_price {
+                    regular_price {
+                        value
+                        currency
+                    }
+                    final_price {
+                        value
+                        currency
+                    }
+                    discount {
+                        amount_off
+                        percent_off
+                    }
+                }
+            }
+            ... on ConfigurableProduct {
+                configurable_options {
+                    attribute_code
+                    attribute_id
+                    id
+                    label
+                    values {
+                        default_label
+                        label
+                        store_label
+                        use_default_value
+                        value_index
+                        swatch_data {
+                            ... on ImageSwatchData {
+                                thumbnail
+                            }
+                            value
+                        }
+                    }
+                }
+                variants {
+                    attributes {
+                        code
+                        value_index
+                    }
+                    product {
+                        id
+                        media_gallery_entries {
+                            id
+                            disabled
+                            file
+                            label
+                            position
+                        }
+                        sku
+                        stock_status
+                        stock_status_data {
+                            qty
+                            low_stock_qty
+                            stock_status
+                        }
+                    }
+                }
+            }
+        }
+        page_info {
+            total_pages
+        }
+        total_count
+    }
+}

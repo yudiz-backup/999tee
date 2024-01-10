@@ -1,0 +1,10 @@
+.errorMessage div,
+.errorMessage {
+    color: var(--error-color);
+    display: block;
+    padding: 0;
+}
+.errorMessage a {
+    color: var(--secondary-dark-color);
+    text-decoration: underline !important;
+}

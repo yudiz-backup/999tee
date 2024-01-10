@@ -1,0 +1,10 @@
+query jobCategoriesList{
+  jobcategories {
+    created_at
+    entity_id
+    name
+    sort
+    status
+    updated_at
+  }
+}

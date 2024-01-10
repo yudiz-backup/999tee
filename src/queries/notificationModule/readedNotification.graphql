@@ -1,0 +1,5 @@
+mutation readedNotification($id: Int ){
+  notificationStatusUpdate(input: {id: $id}) {
+    success_message
+  }
+}

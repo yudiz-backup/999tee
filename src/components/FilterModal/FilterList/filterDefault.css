@@ -1,0 +1,23 @@
+.root {
+    margin: 0 10px 10px 0;
+}
+.icon {
+}
+
+.iconActive {
+    composes: icon;
+}
+.iconActive.icon {
+    display: none;
+}
+.icon + span {
+    padding: 5px 10px;
+    border: 1px solid var(--base-color);
+    display: inline-flex;
+    border-radius: 3px;
+    color: var(--base-color);
+}
+.iconActive.icon + span {
+    background: var(--base-color);
+    color: var(--white-color);
+}

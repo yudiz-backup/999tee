@@ -1,0 +1,39 @@
+mutation giftWrapSpecifiedItem(
+$cart_id: String!
+$item_id:Int!
+$wrap_id:Int!
+$message:String
+){ 
+mpGiftWrapWrapperSet( 
+cart_id: $cart_id 
+item_id: $item_id
+wrap_id: $wrap_id
+message: $message 
+){ 
+item_id 
+mp_gift_wrap_data { 
+all_cart 
+amount 
+category 
+created_at 
+description 
+gift_message 
+gift_message_fee 
+image 
+name 
+price 
+price_type 
+sort_order 
+status 
+updated_at 
+use_gift_message 
+wrap_id 
+} 
+name 
+price 
+product_type 
+qty 
+quote_id 
+sku 
+}
+}

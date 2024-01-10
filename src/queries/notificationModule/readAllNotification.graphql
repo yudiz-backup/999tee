@@ -1,0 +1,5 @@
+query notificationReadAll{
+  notificationReadAll {
+    status
+  }
+}

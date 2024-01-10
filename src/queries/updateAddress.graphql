@@ -1,0 +1,5 @@
+mutation updateAddress($id: Int!, $input: CustomerAddressInput) {
+    updateCustomerAddress(id: $id, input: $input) {
+        id
+    }
+}

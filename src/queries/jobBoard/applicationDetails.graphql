@@ -1,0 +1,17 @@
+query applicationDetails{
+  application {
+    address
+    created_at
+    email
+    experience
+    firstname
+    application_id
+    id
+    job
+    category_name
+    job_status_applicant
+    lastname
+    position
+    qualification
+  }
+}

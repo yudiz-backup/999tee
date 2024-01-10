@@ -1,0 +1,82 @@
+.root {
+    display: grid;
+    grid-gap: 26px;
+}
+
+.root :is([class="checkbox-checkboxItem-2jm"]) {
+    display: none;
+}
+
+.root [class="checkbox-icon-1CV"] {
+    margin-right: 0;
+}
+
+.checkoutButton {
+    composes: root_highPriority from '../../Button/button.css';
+    grid-column: 1 / span 1;
+    width: 10rem;
+  
+    /* margin: auto; */
+}
+.gift_text{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 16px;
+}
+.gift_text {
+    padding: 15px 15px;
+    padding-bottom: 0px;
+    margin-bottom: 20px;
+}
+.gift_wrapper .formCheck{
+    position: relative;
+    padding-left: 20px !important;
+}
+.gift_wrapper .formCheck input{
+    margin: 0px;
+    left: 0;
+    top: 4px;
+    /* top: 50%;
+    transform: translateY(-50%); */
+}
+.gift_text .formCheck{
+    min-width: 316px;
+}
+.gift_btn_wrap{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.gift_text .gender{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 36px;
+    /* justify-content: space-between; */
+}
+.gift_text .gender input{
+    accent-color: var(--black-color);
+}
+.gender .formCheck{
+    padding-left: 16px;
+}
+.root [class="product-popupbtn-2Ys"] {
+    margin-bottom: 0;
+}
+
+.popupbtn_icon img {
+    width: 15px;
+    height: auto;
+    margin-inline: 3px 6px;
+}
+@media (max-width: 767px){
+    .gift_text{
+        padding: 0px;
+    }
+    .gift_btn_wrap{
+     
+    }
+}

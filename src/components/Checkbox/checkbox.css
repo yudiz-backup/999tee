@@ -1,0 +1,67 @@
+.root {
+    --stroke: var(--black-color);
+    align-items: center;
+    color: rgb(var(--venia-global-color-gray-900));
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-areas: 'input label';
+    grid-template-columns: min-content 1fr;
+    line-height: 1.5rem;
+    margin-bottom: 0;
+}
+
+.check_box label{
+    margin: 0px !important;
+}
+.checkboxItem {
+    margin-left: 5px;
+}
+.checkboxItem a {
+    padding-left: 8px;
+   font-family: var(--font-family) !important; font-weight: var(--font_weight_m) !important;
+}
+.input {
+    -webkit-appearance: none;
+    background: none;
+    border-radius: 3px;
+    cursor: pointer;
+    grid-area: input;
+    height: 15px;
+    width: 15px;
+}
+
+.icon {
+    grid-area: input;
+    pointer-events: none;
+    width: 1.5rem;
+}
+
+.icon svg {
+    stroke: var(--black-color);
+    width: 15px;
+    stroke-width: 1.2;
+}
+
+.label {
+    cursor: pointer;
+    font-size: 14px;
+    grid-area: label;
+    justify-self: start;
+    color: var(--black-color);
+    font-family: var(--font-family); font-weight: var(--font_weight_l);
+    font-weight: 500;
+}
+
+.input:disabled {
+    cursor: default;
+}
+
+.input + .icon {
+    margin-right: 5px;
+}
+
+.input:active,
+.input:focus {
+    box-shadow: var(--primary-box-shadow);
+    outline: none;
+}

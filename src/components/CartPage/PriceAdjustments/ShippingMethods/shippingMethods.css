@@ -1,0 +1,47 @@
+.root {
+    display: grid;
+    gap: 1rem;
+}
+
+.message {
+    line-height: 1.5rem;
+    color: var(--ced-brown-text-color);
+    letter-spacing: 1px;
+    font-size: 12px;
+}
+
+.prompt {
+    font-size: 16px;
+    font-family: var(--font-family); font-weight: var(--font_weight_l);
+    color: var(--ced-black-color);
+}
+
+.shipping_methods {
+    grid-area: methods;
+}
+
+.shipping_methods_hidden {
+    composes: shipping_methods;
+    display: none;
+}
+
+.mask {
+    opacity: 0.5;
+    pointer-events: none;
+}
+.action_btn {
+}
+.estimateButton {
+    composes: root_normalPriority from '../../../Button/button.css';
+    justify-self: start;
+}
+
+/*
+ * Mobile-specific styles.
+ */
+
+@media (max-width: 640px) {
+    .root {
+        padding-right: unset;
+    }
+}

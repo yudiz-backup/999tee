@@ -1,0 +1,84 @@
+.root {
+    display: flex;
+    align-items: center;
+}
+.flexAlign {
+    composes: root;
+}
+.flexJustify {
+    display: flex;
+    justify-content: center;
+}
+.inlineflex {
+    display: inline-flex;
+}
+.InlineFlex {
+    composes: inlineflex;
+    align-items: center;
+    justify-content: center;
+}
+.flexCenter {
+    composes: root;
+    justify-content: center;
+}
+.flexSpace {
+    composes: root;
+    justify-content: space-between;
+}
+.flexDirection {
+    flex-direction: column;
+}
+
+.Transition {
+    transition: 0.3s all;
+    -webkit-transition: 0.3s all;
+    -moz-transition: 0.3s all;
+}
+/* button variables */
+.btnRoot {
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.3s all;
+    padding: 7px 10px;
+    max-width: 100%;
+   font-family: var(--font-family) !important; font-weight: var(--font_weight_m) !important;
+}
+.view_btn {
+    display: block;
+    background: var(--black-color);
+    color: var(--white-color);
+    height: 41px;
+    composes: btnRoot;
+    width: 200px;
+    padding: 0 !important;
+}
+.view_btn:hover {
+    background: var(--button-hover-color);
+}
+.blackBorderBtn {
+    composes: btnRoot;
+    border: 1px solid var(--black-color);
+    color: var(--black-color);
+    background-color: transparent;
+    font-size: 13px;
+}
+.blackBorderBtn:hover {
+    border: 1px solid var(--black-color);
+    color: var(--white-color);
+    background-color: var(--black-color);
+}
+.blackBtn {
+    composes: btnRoot;
+    background-color: var(--black-color) !important;
+    color: var(--white-color) !important;
+}
+.blackBtn:hover {
+    color: var(--white-color);
+    background-color: var(--button-hover-color) !important;
+}
+
+@media (max-width: 767px) {
+    .mobile_m_bottom {
+        margin-bottom: 0px;
+    }
+}

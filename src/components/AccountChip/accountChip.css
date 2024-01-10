@@ -1,0 +1,12 @@
+.root {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.loader {
+    composes: indicator from '../LoadingIndicator/indicator.css';
+}
+.root svg {
+    position: relative;
+    left: 3px;
+}

@@ -1,0 +1,5 @@
+mutation notificationDelete($id: Int!) {
+    notificationDelete(id: $id) {
+        success_message
+    }
+}

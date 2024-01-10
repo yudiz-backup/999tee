@@ -1,0 +1,58 @@
+mutation rmaNewRequest(
+  $order_increment_id:String!,
+  $comment:String,
+  $upload:[MpRmaUploadInput]!,
+  $request_item:[MpRmaRequestItemsInput]!,
+  ){
+  mpRMARequest(          
+    order_increment_id: $order_increment_id,
+    comment: $comment,
+    upload: $upload,
+    request_item: $request_item
+  ) {
+    comment
+    created_at
+    customer_email
+    files
+    increment_id
+    is_canceled
+    last_responded_by
+    order_id
+    order_increment_id
+    request_id
+    request_item {
+      additional_fields
+      created_at
+      item_id
+      name
+      order_item_id
+      price
+      price_returned
+      product_id
+      qty_rma
+      reason
+      request_id
+      sku
+      solution
+    }
+    request_reply {
+      author_name
+      content
+      created_at
+      files
+      is_customer_notified
+      is_visible_on_front
+      reply_id
+      request_id
+      type
+    }
+    request_shipping_label {
+      request_id
+      shipping_label_id
+    }
+    status_id
+    store_id
+    updated_at
+  }
+}
+

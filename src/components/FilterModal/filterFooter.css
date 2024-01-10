@@ -1,0 +1,36 @@
+.root {
+    align-items: center;
+    background-color: var(--white-color);
+    display: flex;
+    padding: 0px 10px;
+    gap: 0.75rem;
+    grid-auto-columns: min-content;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    height: 5rem;
+    position: relative;
+}
+.root button {
+    flex: 0 0 48%;
+    min-width: 48%;
+}
+.root button:nth-child(1):disabled {
+    color: var(--black-color);
+}
+@media screen and (min-width: 768px) and (max-width: 850px) {
+    .root button {
+        padding: 3px;
+        font-size: 14px;
+    }
+}
+@media screen and (min-width: 851px) {
+    .root button {
+        padding: 10px;
+    }
+}
+@media screen and (min-width: 220px) and (max-width: 767px) {
+    .root button {
+        flex: 0 0 100%;
+        min-width: 100%;
+    }
+}

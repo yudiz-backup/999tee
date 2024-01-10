@@ -1,0 +1,67 @@
+/* Styles for "add" view. */
+.entryForm,
+.entryFormError {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-column-gap: 1.5rem;
+}
+
+.entryFormError input {
+    border-color: var(--error-color);
+}
+
+.entryFormError input:focus {
+    border-color: rgb(var(--venia-global-color-gray-600));
+}
+
+.entryFormError p {
+    color: var(--error-color);
+    font-weight: var(--venia-global-fontWeight-semibold);
+}
+
+.errorContainer {
+    /* Duplicate the left/right/bottom padding on the accordion section */
+    padding-top: 1.5rem;
+    color: var(--error-color);
+    line-height: var(--venia-global-lineHeight-300);
+}
+
+.apply_or_remove_button {
+    composes: root_highPriority from '../../../Button/button.css';
+}
+
+/* on mobile... */
+@media (max-width: 960px) {
+    .entryForm,
+    .entryFormError {
+        /* switch to rows. */
+        grid-template-columns: unset;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+
+/* Styles for "removal" view. */
+.removeButton {
+    composes: root from '../../../LinkButton/linkButton.css';
+    margin-left: 1rem;
+}
+.coupon_toggle{
+position: absolute;
+right: 0%;
+top: 0;
+cursor: pointer;
+}
+.form_coupon{
+    position: relative;
+}
+.apply_cupon_wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.apply_cupon_wrap .cupon_btn{
+    cursor: pointer;
+    padding-top: 5px;
+    padding-bottom: 2px;
+    text-decoration: underline !important;
+}

@@ -1,0 +1,15 @@
+query verifyMobileOTP(
+    $mobileNumber: String
+    $otp: String
+    $websiteId: Int
+){
+  loginOTPVerify(
+      mobileNumber: $mobileNumber, 
+      otp: $otp, 
+      websiteId: $websiteId) {
+    message
+    status
+    token
+    cart_id
+  }
+}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html
+    lang="<%= global.LOCALE %>"
+    data-image-optimizing-origin="<%= process.env.IMAGE_OPTIMIZING_ORIGIN %>"
+    data-media-backend="<%= global.MAGENTO_MEDIA_BACKEND_URL %>"
+>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
+        />
+
+        <meta
+            name="p:domain_verify"
+            content="0c81a9c4f2829f47a81b3bd7fb2901da"
+        />
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="shortcut icon" href="/cenia-static/favicon.ico" />
+        <link rel="stylesheet" href="/src/components/index.css" />
+        <title>Home Page | <%= STORE_NAME %></title>
+
+        <!-- Google tag (gtag.js) -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-3BZWNCZX3R"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'G-3BZWNCZX3R');
+        </script>
+
+        <!-- Google Tag Manager -->
+        <script>
+            (function(w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({
+                    'gtm.start': new Date().getTime(),
+                    event: 'gtm.js'
+                });
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s),
+                    dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-MV9RN364');
+        </script>
+        <!-- End Google Tag Manager -->
+        <!--
+            Apple Specific Tags
+
+            To be included until Safari supports WebAppManifest
+            See Docs:
+            - https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html
+            - https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html
+        -->
+        <!--
+            Apple Icons for Homescreen
+            Sizes: https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/app-icon/
+        -->
+        <link
+            rel="apple-touch-icon"
+            href="/cenia-static/icons/cenia_square_57.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/cenia-static/icons/apple-touch-icon.png"
+        />
+        <link rel="preconnect" href="<%= process.env.MAGENTO_BACKEND_URL %>" />
+        <link
+            rel="preload"
+            href="/cenia-static/fonts/Montserrat-Regular.ttf"
+            as="font"
+            type="font/ttf"
+            crossorigin
+        />
+        <link
+            rel="preload"
+            href="/cenia-static/fonts/Montserrat-Medium.ttf"
+            as="font"
+            type="font/ttf"
+            crossorigin
+        />
+        <link
+            rel="preload"
+            href="/cenia-static/fonts/Montserrat-SemiBold.ttf"
+            as="font"
+            type="font/ttf"
+            crossorigin
+        />
+
+        <link
+            rel="stylesheet"
+            type="text/css"
+            charset="UTF-8"
+            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+        />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+        />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <!-- <link rel="stylesheet" href="./src/components/Slider/customSliderStyle.css"> -->
+
+        <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    </head>
+
+    <body id="theme_mode">
+        <div id="root"></div>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript
+            ><iframe
+                src="https://www.googletagmanager.com/ns.html?id=GTM-MV9RN364 "
+                height="0"
+                width="0"
+                style="display:none;visibility:hidden"
+            ></iframe
+        ></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+      
+        <!-- Fallback for when JavaScript is disabled. -->
+        <noscript>
+            <style>
+                .fallback-nojs {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .fallback-nojs a {
+                    color: currentColor;
+                }
+
+                .fallback-closed {
+                    height: 40vh;
+                }
+                body [id='root'] {
+                    height: 100vh;
+                    height: 100svh;
+                    overflow-x: hidden;
+                    overflow-y: hidden;
+                }
+            </style>
+            <div class="fallback-nojs">
+                <img
+                    class="fallback-closed"
+                    alt="JavaScript is disabled"
+                    src="/cenia-static/ceniaClosed.png"
+                />
+                <h1 class="fallback-heading">Oops! JavaScript is disabled</h1>
+                <div>
+                    To browse the 999Tee store,<br />
+                    <a href="https://www.enable-javascript.com"
+                        >enable JavaScript in your browser.</a
+                    >
+                </div>
+            </div>
+        </noscript>
+        <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEB60wEruO2ixMd2n2te6ZwTJGKzsBl4k&libraries=places&callback=Function.prototype"
+            async
+        ></script>
+    </body>
+</html>

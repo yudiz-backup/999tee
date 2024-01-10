@@ -1,0 +1,12 @@
+.root {
+    composes: root from './tileList.css';
+    /* grid-template-columns: repeat(auto-fit, minmax(1rem, max-content)); */
+    gap:10px;
+    grid-template-columns: repeat(auto-fill, minmax(42px, max-content));
+}
+.color_product_code li:hover{
+    background-color: var(--secondary-color);
+}
+.color_product_code li{
+    transition: all 0.3s ease;
+}

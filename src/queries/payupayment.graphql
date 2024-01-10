@@ -1,0 +1,25 @@
+query paymentPayu($order_id: String!) {
+  payUPayment(order_id: $order_id) {
+    fields {
+      amount
+      city
+      country
+      curl
+      email
+      firstname
+      furl
+      hash
+      key
+      lastname
+      phone
+      productinfo
+      state
+      surl
+      txnid
+      udf1
+      udf5
+      zip
+    }
+    url
+  }
+}

@@ -1,0 +1,25 @@
+query getProductReviews($product_id: Int!, $current_page: Int!, $limit: Int!) {
+    productReviews(
+        product_id: $product_id
+        current_page: $current_page
+        limit: $limit
+    ) {
+        data {
+            created_at
+            review
+            review_id
+            product_name
+            rating
+            detail
+            url_key
+            nickname
+        }
+        ratingStarCount
+        avgRating
+        totalRating
+        totalStarts
+        current_page
+        limit
+        total_count
+    }
+}

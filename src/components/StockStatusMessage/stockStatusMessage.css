@@ -1,0 +1,4 @@
+.root {
+    color: var(--error-color);
+    padding: 0px 15px;
+}
